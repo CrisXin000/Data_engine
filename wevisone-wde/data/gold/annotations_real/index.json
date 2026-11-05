@@ -1,0 +1,8 @@
+{
+  "images": [
+    {"name": "bus", "file": "bus.jpg", "categories": ["person", "bus"]},
+    {"name": "zidane", "file": "zidane.jpg", "categories": ["person", "tie"]},
+    {"name": "dog", "file": "dog.jpg", "categories": ["dog"]}
+  ],
+  "note": "Real sample images for YOLO-World / OWLv2 smoke tests. Synthetic gold remains under data/gold/images/ for mock regression."
+}

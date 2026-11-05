@@ -1,0 +1,1280 @@
+{
+  "run_id": "run-20261105T145029Z-ccda6ad8",
+  "data_version": "m1-mvp-0.1",
+  "image": [
+    {
+      "id": 8,
+      "path": "/workspace/wevisone-wde/data/gold/images_real/bus.jpg",
+      "width": 810,
+      "height": 1080,
+      "source": "ingest",
+      "sha256": "c02019c4979c191eb739ddd944445ef408dad5679acab6fd520ef9d434bfbc63",
+      "created_at": "2026-11-05T14:50:29.297420",
+      "run_id": "run-20261105T145029Z-f4660618",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    }
+  ],
+  "query": [
+    {
+      "id": 82,
+      "image_id": 8,
+      "text": "person",
+      "query_type": "category",
+      "language": "en",
+      "graph_node_id": 5,
+      "source": "discover",
+      "is_negative": false,
+      "meta": {
+        "backend": "sidecar_labels",
+        "note": "curated labels.json — YOLO-World tagging skipped"
+      },
+      "created_at": "2026-11-05T14:50:30.694427",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 83,
+      "image_id": 8,
+      "text": "bus",
+      "query_type": "category",
+      "language": "en",
+      "graph_node_id": 16,
+      "source": "discover",
+      "is_negative": false,
+      "meta": {
+        "backend": "sidecar_labels",
+        "note": "curated labels.json — YOLO-World tagging skipped"
+      },
+      "created_at": "2026-11-05T14:50:37.247877",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 84,
+      "image_id": 8,
+      "text": "the colored person on the left",
+      "query_type": "referring",
+      "language": "en",
+      "graph_node_id": 5,
+      "source": "discover",
+      "is_negative": false,
+      "meta": {
+        "backend": "mock_referring",
+        "note": "MOCK template — Qwen3-VL interface reserved",
+        "base_category": "person"
+      },
+      "created_at": "2026-11-05T14:50:40.825317",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 85,
+      "image_id": 8,
+      "text": "the largest bus",
+      "query_type": "referring",
+      "language": "en",
+      "graph_node_id": 16,
+      "source": "discover",
+      "is_negative": false,
+      "meta": {
+        "backend": "mock_referring",
+        "note": "MOCK template — Qwen3-VL interface reserved",
+        "base_category": "bus"
+      },
+      "created_at": "2026-11-05T14:50:44.212732",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 86,
+      "image_id": 8,
+      "text": "the purple hexagon that does not exist",
+      "query_type": "referring",
+      "language": "en",
+      "graph_node_id": null,
+      "source": "discover",
+      "is_negative": true,
+      "meta": {
+        "backend": "mock_referring",
+        "is_negative_hint": true,
+        "note": "MOCK absent-target referring query"
+      },
+      "created_at": "2026-11-05T14:50:47.275134",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    }
+  ],
+  "candidate": [
+    {
+      "id": 152,
+      "query_id": 82,
+      "expert_name": "ExpertA_yolo_world",
+      "x1": 50.25969696044922,
+      "y1": 398.4804992675781,
+      "x2": 247.4724884033203,
+      "y2": 904.8421630859375,
+      "score": 0.9085805416107178,
+      "raw_output": {
+        "mock": false,
+        "model": "yolov8s-worldv2.pt",
+        "backend": "ultralytics.YOLO-World",
+        "stands_in_for": "paper Expert A (SAM3) — open-source substitute: YOLO-World",
+        "conf_threshold": 0.25,
+        "iou_threshold": 0.5,
+        "set_classes": [
+          "person"
+        ],
+        "predicted_class": "person",
+        "query": "person",
+        "query_type": "category",
+        "class_extract_note": "engineering heuristic extract_class_names",
+        "device": "cpu"
+      },
+      "created_at": "2026-11-05T14:50:37.240832",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 153,
+      "query_id": 82,
+      "expert_name": "ExpertA_yolo_world",
+      "x1": 223.83517456054688,
+      "y1": 406.80035400390625,
+      "x2": 346.0296325683594,
+      "y2": 860.6427001953125,
+      "score": 0.895146906375885,
+      "raw_output": {
+        "mock": false,
+        "model": "yolov8s-worldv2.pt",
+        "backend": "ultralytics.YOLO-World",
+        "stands_in_for": "paper Expert A (SAM3) — open-source substitute: YOLO-World",
+        "conf_threshold": 0.25,
+        "iou_threshold": 0.5,
+        "set_classes": [
+          "person"
+        ],
+        "predicted_class": "person",
+        "query": "person",
+        "query_type": "category",
+        "class_extract_note": "engineering heuristic extract_class_names",
+        "device": "cpu"
+      },
+      "created_at": "2026-11-05T14:50:37.242708",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 154,
+      "query_id": 82,
+      "expert_name": "ExpertA_yolo_world",
+      "x1": 667.2506103515625,
+      "y1": 388.1216125488281,
+      "x2": 810.0,
+      "y2": 879.4717407226562,
+      "score": 0.8893685936927795,
+      "raw_output": {
+        "mock": false,
+        "model": "yolov8s-worldv2.pt",
+        "backend": "ultralytics.YOLO-World",
+        "stands_in_for": "paper Expert A (SAM3) — open-source substitute: YOLO-World",
+        "conf_threshold": 0.25,
+        "iou_threshold": 0.5,
+        "set_classes": [
+          "person"
+        ],
+        "predicted_class": "person",
+        "query": "person",
+        "query_type": "category",
+        "class_extract_note": "engineering heuristic extract_class_names",
+        "device": "cpu"
+      },
+      "created_at": "2026-11-05T14:50:37.243123",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 155,
+      "query_id": 82,
+      "expert_name": "ExpertA_yolo_world",
+      "x1": 0.0,
+      "y1": 483.4530944824219,
+      "x2": 79.10628509521484,
+      "y2": 887.3857421875,
+      "score": 0.6136502027511597,
+      "raw_output": {
+        "mock": false,
+        "model": "yolov8s-worldv2.pt",
+        "backend": "ultralytics.YOLO-World",
+        "stands_in_for": "paper Expert A (SAM3) — open-source substitute: YOLO-World",
+        "conf_threshold": 0.25,
+        "iou_threshold": 0.5,
+        "set_classes": [
+          "person"
+        ],
+        "predicted_class": "person",
+        "query": "person",
+        "query_type": "category",
+        "class_extract_note": "engineering heuristic extract_class_names",
+        "device": "cpu"
+      },
+      "created_at": "2026-11-05T14:50:37.243337",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 156,
+      "query_id": 82,
+      "expert_name": "ExpertB_owlv2",
+      "x1": 1.1720877885818481,
+      "y1": 544.7537326812744,
+      "x2": 71.95054650306702,
+      "y2": 875.2287483215332,
+      "score": 0.10091551393270493,
+      "raw_output": {
+        "mock": false,
+        "model": "google/owlv2-base-patch16",
+        "backend": "transformers.Owlv2",
+        "stands_in_for": "paper Expert B (in-house DINO OVD) — open-source substitute: OWLv2",
+        "score_threshold": 0.1,
+        "text_queries": [
+          "person"
+        ],
+        "predicted_class": "person",
+        "query": "person",
+        "query_type": "category",
+        "class_extract_note": "engineering heuristic extract_class_names",
+        "device": "cpu",
+        "inference_max_side": 768
+      },
+      "created_at": "2026-11-05T14:50:37.243531",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 157,
+      "query_id": 83,
+      "expert_name": "ExpertA_yolo_world",
+      "x1": 1.934743881225586,
+      "y1": 231.1337127685547,
+      "x2": 807.4843139648438,
+      "y2": 745.04296875,
+      "score": 0.908149242401123,
+      "raw_output": {
+        "mock": false,
+        "model": "yolov8s-worldv2.pt",
+        "backend": "ultralytics.YOLO-World",
+        "stands_in_for": "paper Expert A (SAM3) — open-source substitute: YOLO-World",
+        "conf_threshold": 0.25,
+        "iou_threshold": 0.5,
+        "set_classes": [
+          "bus"
+        ],
+        "predicted_class": "bus",
+        "query": "bus",
+        "query_type": "category",
+        "class_extract_note": "engineering heuristic extract_class_names",
+        "device": "cpu"
+      },
+      "created_at": "2026-11-05T14:50:40.819541",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 158,
+      "query_id": 83,
+      "expert_name": "ExpertB_owlv2",
+      "x1": 8.923999071121216,
+      "y1": 227.3481559753418,
+      "x2": 803.3359336853027,
+      "y2": 731.8308162689209,
+      "score": 0.7331628799438477,
+      "raw_output": {
+        "mock": false,
+        "model": "google/owlv2-base-patch16",
+        "backend": "transformers.Owlv2",
+        "stands_in_for": "paper Expert B (in-house DINO OVD) — open-source substitute: OWLv2",
+        "score_threshold": 0.1,
+        "text_queries": [
+          "bus"
+        ],
+        "predicted_class": "bus",
+        "query": "bus",
+        "query_type": "category",
+        "class_extract_note": "engineering heuristic extract_class_names",
+        "device": "cpu",
+        "inference_max_side": 768
+      },
+      "created_at": "2026-11-05T14:50:40.819970",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 159,
+      "query_id": 83,
+      "expert_name": "ExpertB_owlv2",
+      "x1": 799.0837097167969,
+      "y1": 363.343448638916,
+      "x2": 810.0,
+      "y2": 396.6852378845215,
+      "score": 0.10130828619003296,
+      "raw_output": {
+        "mock": false,
+        "model": "google/owlv2-base-patch16",
+        "backend": "transformers.Owlv2",
+        "stands_in_for": "paper Expert B (in-house DINO OVD) — open-source substitute: OWLv2",
+        "score_threshold": 0.1,
+        "text_queries": [
+          "bus"
+        ],
+        "predicted_class": "bus",
+        "query": "bus",
+        "query_type": "category",
+        "class_extract_note": "engineering heuristic extract_class_names",
+        "device": "cpu",
+        "inference_max_side": 768
+      },
+      "created_at": "2026-11-05T14:50:40.820361",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 160,
+      "query_id": 83,
+      "expert_name": "ExpertB_owlv2",
+      "x1": 680.1211738586426,
+      "y1": 360.36653995513916,
+      "x2": 788.5425853729248,
+      "y2": 496.5700149536133,
+      "score": 0.13028666377067566,
+      "raw_output": {
+        "mock": false,
+        "model": "google/owlv2-base-patch16",
+        "backend": "transformers.Owlv2",
+        "stands_in_for": "paper Expert B (in-house DINO OVD) — open-source substitute: OWLv2",
+        "score_threshold": 0.1,
+        "text_queries": [
+          "bus"
+        ],
+        "predicted_class": "bus",
+        "query": "bus",
+        "query_type": "category",
+        "class_extract_note": "engineering heuristic extract_class_names",
+        "device": "cpu",
+        "inference_max_side": 768
+      },
+      "created_at": "2026-11-05T14:50:40.820574",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 161,
+      "query_id": 83,
+      "expert_name": "ExpertB_owlv2",
+      "x1": 692.9210186004639,
+      "y1": 375.8125877380371,
+      "x2": 782.9338073730469,
+      "y2": 456.9521999359131,
+      "score": 0.11363192647695541,
+      "raw_output": {
+        "mock": false,
+        "model": "google/owlv2-base-patch16",
+        "backend": "transformers.Owlv2",
+        "stands_in_for": "paper Expert B (in-house DINO OVD) — open-source substitute: OWLv2",
+        "score_threshold": 0.1,
+        "text_queries": [
+          "bus"
+        ],
+        "predicted_class": "bus",
+        "query": "bus",
+        "query_type": "category",
+        "class_extract_note": "engineering heuristic extract_class_names",
+        "device": "cpu",
+        "inference_max_side": 768
+      },
+      "created_at": "2026-11-05T14:50:40.820760",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 162,
+      "query_id": 83,
+      "expert_name": "ExpertB_owlv2",
+      "x1": 558.0401515960693,
+      "y1": 354.6066999435425,
+      "x2": 792.2895240783691,
+      "y2": 507.49171257019043,
+      "score": 0.11763051897287369,
+      "raw_output": {
+        "mock": false,
+        "model": "google/owlv2-base-patch16",
+        "backend": "transformers.Owlv2",
+        "stands_in_for": "paper Expert B (in-house DINO OVD) — open-source substitute: OWLv2",
+        "score_threshold": 0.1,
+        "text_queries": [
+          "bus"
+        ],
+        "predicted_class": "bus",
+        "query": "bus",
+        "query_type": "category",
+        "class_extract_note": "engineering heuristic extract_class_names",
+        "device": "cpu",
+        "inference_max_side": 768
+      },
+      "created_at": "2026-11-05T14:50:40.820938",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 163,
+      "query_id": 84,
+      "expert_name": "ExpertA_yolo_world",
+      "x1": 50.25969696044922,
+      "y1": 398.4804992675781,
+      "x2": 247.4724884033203,
+      "y2": 904.8421630859375,
+      "score": 0.9085803627967834,
+      "raw_output": {
+        "mock": false,
+        "model": "yolov8s-worldv2.pt",
+        "backend": "ultralytics.YOLO-World",
+        "stands_in_for": "paper Expert A (SAM3) — open-source substitute: YOLO-World",
+        "conf_threshold": 0.25,
+        "iou_threshold": 0.5,
+        "set_classes": [
+          "person"
+        ],
+        "predicted_class": "person",
+        "query": "the colored person on the left",
+        "query_type": "referring",
+        "class_extract_note": "engineering heuristic extract_class_names",
+        "device": "cpu"
+      },
+      "created_at": "2026-11-05T14:50:44.208251",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 164,
+      "query_id": 84,
+      "expert_name": "ExpertA_yolo_world",
+      "x1": 223.83517456054688,
+      "y1": 406.80035400390625,
+      "x2": 346.0296325683594,
+      "y2": 860.6427001953125,
+      "score": 0.8951466083526611,
+      "raw_output": {
+        "mock": false,
+        "model": "yolov8s-worldv2.pt",
+        "backend": "ultralytics.YOLO-World",
+        "stands_in_for": "paper Expert A (SAM3) — open-source substitute: YOLO-World",
+        "conf_threshold": 0.25,
+        "iou_threshold": 0.5,
+        "set_classes": [
+          "person"
+        ],
+        "predicted_class": "person",
+        "query": "the colored person on the left",
+        "query_type": "referring",
+        "class_extract_note": "engineering heuristic extract_class_names",
+        "device": "cpu"
+      },
+      "created_at": "2026-11-05T14:50:44.208720",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 165,
+      "query_id": 84,
+      "expert_name": "ExpertA_yolo_world",
+      "x1": 667.2506103515625,
+      "y1": 388.1216125488281,
+      "x2": 810.0,
+      "y2": 879.4717407226562,
+      "score": 0.8893682956695557,
+      "raw_output": {
+        "mock": false,
+        "model": "yolov8s-worldv2.pt",
+        "backend": "ultralytics.YOLO-World",
+        "stands_in_for": "paper Expert A (SAM3) — open-source substitute: YOLO-World",
+        "conf_threshold": 0.25,
+        "iou_threshold": 0.5,
+        "set_classes": [
+          "person"
+        ],
+        "predicted_class": "person",
+        "query": "the colored person on the left",
+        "query_type": "referring",
+        "class_extract_note": "engineering heuristic extract_class_names",
+        "device": "cpu"
+      },
+      "created_at": "2026-11-05T14:50:44.208948",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 166,
+      "query_id": 84,
+      "expert_name": "ExpertA_yolo_world",
+      "x1": 0.0,
+      "y1": 483.4530029296875,
+      "x2": 79.10628509521484,
+      "y2": 887.3857421875,
+      "score": 0.6136502027511597,
+      "raw_output": {
+        "mock": false,
+        "model": "yolov8s-worldv2.pt",
+        "backend": "ultralytics.YOLO-World",
+        "stands_in_for": "paper Expert A (SAM3) — open-source substitute: YOLO-World",
+        "conf_threshold": 0.25,
+        "iou_threshold": 0.5,
+        "set_classes": [
+          "person"
+        ],
+        "predicted_class": "person",
+        "query": "the colored person on the left",
+        "query_type": "referring",
+        "class_extract_note": "engineering heuristic extract_class_names",
+        "device": "cpu"
+      },
+      "created_at": "2026-11-05T14:50:44.209175",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 167,
+      "query_id": 84,
+      "expert_name": "ExpertB_owlv2",
+      "x1": 1.1720877885818481,
+      "y1": 544.7537326812744,
+      "x2": 71.95054650306702,
+      "y2": 875.2287483215332,
+      "score": 0.10091551393270493,
+      "raw_output": {
+        "mock": false,
+        "model": "google/owlv2-base-patch16",
+        "backend": "transformers.Owlv2",
+        "stands_in_for": "paper Expert B (in-house DINO OVD) — open-source substitute: OWLv2",
+        "score_threshold": 0.1,
+        "text_queries": [
+          "person"
+        ],
+        "predicted_class": "person",
+        "query": "the colored person on the left",
+        "query_type": "referring",
+        "class_extract_note": "engineering heuristic extract_class_names",
+        "device": "cpu",
+        "inference_max_side": 768
+      },
+      "created_at": "2026-11-05T14:50:44.209386",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 168,
+      "query_id": 85,
+      "expert_name": "ExpertA_yolo_world",
+      "x1": 1.934743881225586,
+      "y1": 231.1337127685547,
+      "x2": 807.4843139648438,
+      "y2": 745.04296875,
+      "score": 0.908149242401123,
+      "raw_output": {
+        "mock": false,
+        "model": "yolov8s-worldv2.pt",
+        "backend": "ultralytics.YOLO-World",
+        "stands_in_for": "paper Expert A (SAM3) — open-source substitute: YOLO-World",
+        "conf_threshold": 0.25,
+        "iou_threshold": 0.5,
+        "set_classes": [
+          "bus"
+        ],
+        "predicted_class": "bus",
+        "query": "the largest bus",
+        "query_type": "referring",
+        "class_extract_note": "engineering heuristic extract_class_names",
+        "device": "cpu"
+      },
+      "created_at": "2026-11-05T14:50:47.271002",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 169,
+      "query_id": 85,
+      "expert_name": "ExpertB_owlv2",
+      "x1": 8.923999071121216,
+      "y1": 227.3481559753418,
+      "x2": 803.3359336853027,
+      "y2": 731.8308162689209,
+      "score": 0.7331628799438477,
+      "raw_output": {
+        "mock": false,
+        "model": "google/owlv2-base-patch16",
+        "backend": "transformers.Owlv2",
+        "stands_in_for": "paper Expert B (in-house DINO OVD) — open-source substitute: OWLv2",
+        "score_threshold": 0.1,
+        "text_queries": [
+          "bus"
+        ],
+        "predicted_class": "bus",
+        "query": "the largest bus",
+        "query_type": "referring",
+        "class_extract_note": "engineering heuristic extract_class_names",
+        "device": "cpu",
+        "inference_max_side": 768
+      },
+      "created_at": "2026-11-05T14:50:47.271426",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 170,
+      "query_id": 85,
+      "expert_name": "ExpertB_owlv2",
+      "x1": 799.0837097167969,
+      "y1": 363.343448638916,
+      "x2": 810.0,
+      "y2": 396.6852378845215,
+      "score": 0.10130828619003296,
+      "raw_output": {
+        "mock": false,
+        "model": "google/owlv2-base-patch16",
+        "backend": "transformers.Owlv2",
+        "stands_in_for": "paper Expert B (in-house DINO OVD) — open-source substitute: OWLv2",
+        "score_threshold": 0.1,
+        "text_queries": [
+          "bus"
+        ],
+        "predicted_class": "bus",
+        "query": "the largest bus",
+        "query_type": "referring",
+        "class_extract_note": "engineering heuristic extract_class_names",
+        "device": "cpu",
+        "inference_max_side": 768
+      },
+      "created_at": "2026-11-05T14:50:47.271664",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 171,
+      "query_id": 85,
+      "expert_name": "ExpertB_owlv2",
+      "x1": 680.1211738586426,
+      "y1": 360.36653995513916,
+      "x2": 788.5425853729248,
+      "y2": 496.5700149536133,
+      "score": 0.13028666377067566,
+      "raw_output": {
+        "mock": false,
+        "model": "google/owlv2-base-patch16",
+        "backend": "transformers.Owlv2",
+        "stands_in_for": "paper Expert B (in-house DINO OVD) — open-source substitute: OWLv2",
+        "score_threshold": 0.1,
+        "text_queries": [
+          "bus"
+        ],
+        "predicted_class": "bus",
+        "query": "the largest bus",
+        "query_type": "referring",
+        "class_extract_note": "engineering heuristic extract_class_names",
+        "device": "cpu",
+        "inference_max_side": 768
+      },
+      "created_at": "2026-11-05T14:50:47.271898",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 172,
+      "query_id": 85,
+      "expert_name": "ExpertB_owlv2",
+      "x1": 692.9210186004639,
+      "y1": 375.8125877380371,
+      "x2": 782.9338073730469,
+      "y2": 456.9521999359131,
+      "score": 0.11363192647695541,
+      "raw_output": {
+        "mock": false,
+        "model": "google/owlv2-base-patch16",
+        "backend": "transformers.Owlv2",
+        "stands_in_for": "paper Expert B (in-house DINO OVD) — open-source substitute: OWLv2",
+        "score_threshold": 0.1,
+        "text_queries": [
+          "bus"
+        ],
+        "predicted_class": "bus",
+        "query": "the largest bus",
+        "query_type": "referring",
+        "class_extract_note": "engineering heuristic extract_class_names",
+        "device": "cpu",
+        "inference_max_side": 768
+      },
+      "created_at": "2026-11-05T14:50:47.272263",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 173,
+      "query_id": 85,
+      "expert_name": "ExpertB_owlv2",
+      "x1": 558.0401515960693,
+      "y1": 354.6066999435425,
+      "x2": 792.2895240783691,
+      "y2": 507.49171257019043,
+      "score": 0.11763051897287369,
+      "raw_output": {
+        "mock": false,
+        "model": "google/owlv2-base-patch16",
+        "backend": "transformers.Owlv2",
+        "stands_in_for": "paper Expert B (in-house DINO OVD) — open-source substitute: OWLv2",
+        "score_threshold": 0.1,
+        "text_queries": [
+          "bus"
+        ],
+        "predicted_class": "bus",
+        "query": "the largest bus",
+        "query_type": "referring",
+        "class_extract_note": "engineering heuristic extract_class_names",
+        "device": "cpu",
+        "inference_max_side": 768
+      },
+      "created_at": "2026-11-05T14:50:47.272481",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    }
+  ],
+  "verification": [
+    {
+      "id": 152,
+      "candidate_id": 152,
+      "decision": "accept",
+      "reason": "passed score + IoU dedup (rule stand-in for Qwen3-VL)",
+      "score": 0.9085805416107178,
+      "backend": "rule",
+      "raw_output": {
+        "note": "MOCK/rule — not Qwen3-VL",
+        "query": "person",
+        "query_type": "category"
+      },
+      "created_at": "2026-11-05T14:50:37.244224",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 153,
+      "candidate_id": 153,
+      "decision": "accept",
+      "reason": "passed score + IoU dedup (rule stand-in for Qwen3-VL)",
+      "score": 0.895146906375885,
+      "backend": "rule",
+      "raw_output": {
+        "note": "MOCK/rule — not Qwen3-VL",
+        "query": "person",
+        "query_type": "category"
+      },
+      "created_at": "2026-11-05T14:50:37.245388",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 154,
+      "candidate_id": 154,
+      "decision": "accept",
+      "reason": "passed score + IoU dedup (rule stand-in for Qwen3-VL)",
+      "score": 0.8893685936927795,
+      "backend": "rule",
+      "raw_output": {
+        "note": "MOCK/rule — not Qwen3-VL",
+        "query": "person",
+        "query_type": "category"
+      },
+      "created_at": "2026-11-05T14:50:37.245808",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 155,
+      "candidate_id": 155,
+      "decision": "accept",
+      "reason": "passed score + IoU dedup (rule stand-in for Qwen3-VL)",
+      "score": 0.6136502027511597,
+      "backend": "rule",
+      "raw_output": {
+        "note": "MOCK/rule — not Qwen3-VL",
+        "query": "person",
+        "query_type": "category"
+      },
+      "created_at": "2026-11-05T14:50:37.246181",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 156,
+      "candidate_id": 156,
+      "decision": "reject",
+      "reason": "score 0.101 < 0.3",
+      "score": 0.10091551393270493,
+      "backend": "rule",
+      "raw_output": {
+        "mock_vlm": false
+      },
+      "created_at": "2026-11-05T14:50:37.246528",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 157,
+      "candidate_id": 157,
+      "decision": "accept",
+      "reason": "passed score + IoU dedup (rule stand-in for Qwen3-VL)",
+      "score": 0.908149242401123,
+      "backend": "rule",
+      "raw_output": {
+        "note": "MOCK/rule — not Qwen3-VL",
+        "query": "bus",
+        "query_type": "category"
+      },
+      "created_at": "2026-11-05T14:50:40.822596",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 158,
+      "candidate_id": 158,
+      "decision": "duplicate",
+      "reason": "IoU>=0.7 with proposal[0] (ExpertA_yolo_world)",
+      "score": 0.7331628799438477,
+      "backend": "rule",
+      "raw_output": {
+        "duplicate_of": 0
+      },
+      "created_at": "2026-11-05T14:50:40.823258",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 159,
+      "candidate_id": 159,
+      "decision": "reject",
+      "reason": "score 0.101 < 0.3",
+      "score": 0.10130828619003296,
+      "backend": "rule",
+      "raw_output": {
+        "mock_vlm": false
+      },
+      "created_at": "2026-11-05T14:50:40.823456",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 160,
+      "candidate_id": 160,
+      "decision": "reject",
+      "reason": "score 0.130 < 0.3",
+      "score": 0.13028666377067566,
+      "backend": "rule",
+      "raw_output": {
+        "mock_vlm": false
+      },
+      "created_at": "2026-11-05T14:50:40.823623",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 161,
+      "candidate_id": 161,
+      "decision": "reject",
+      "reason": "score 0.114 < 0.3",
+      "score": 0.11363192647695541,
+      "backend": "rule",
+      "raw_output": {
+        "mock_vlm": false
+      },
+      "created_at": "2026-11-05T14:50:40.823781",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 162,
+      "candidate_id": 162,
+      "decision": "reject",
+      "reason": "score 0.118 < 0.3",
+      "score": 0.11763051897287369,
+      "backend": "rule",
+      "raw_output": {
+        "mock_vlm": false
+      },
+      "created_at": "2026-11-05T14:50:40.823934",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 163,
+      "candidate_id": 163,
+      "decision": "accept",
+      "reason": "passed score + IoU dedup (rule stand-in for Qwen3-VL)",
+      "score": 0.9085803627967834,
+      "backend": "rule",
+      "raw_output": {
+        "note": "MOCK/rule — not Qwen3-VL",
+        "query": "the colored person on the left",
+        "query_type": "referring"
+      },
+      "created_at": "2026-11-05T14:50:44.209665",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 164,
+      "candidate_id": 164,
+      "decision": "accept",
+      "reason": "passed score + IoU dedup (rule stand-in for Qwen3-VL)",
+      "score": 0.8951466083526611,
+      "backend": "rule",
+      "raw_output": {
+        "note": "MOCK/rule — not Qwen3-VL",
+        "query": "the colored person on the left",
+        "query_type": "referring"
+      },
+      "created_at": "2026-11-05T14:50:44.210127",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 165,
+      "candidate_id": 165,
+      "decision": "accept",
+      "reason": "passed score + IoU dedup (rule stand-in for Qwen3-VL)",
+      "score": 0.8893682956695557,
+      "backend": "rule",
+      "raw_output": {
+        "note": "MOCK/rule — not Qwen3-VL",
+        "query": "the colored person on the left",
+        "query_type": "referring"
+      },
+      "created_at": "2026-11-05T14:50:44.210482",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 166,
+      "candidate_id": 166,
+      "decision": "accept",
+      "reason": "passed score + IoU dedup (rule stand-in for Qwen3-VL)",
+      "score": 0.6136502027511597,
+      "backend": "rule",
+      "raw_output": {
+        "note": "MOCK/rule — not Qwen3-VL",
+        "query": "the colored person on the left",
+        "query_type": "referring"
+      },
+      "created_at": "2026-11-05T14:50:44.210825",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 167,
+      "candidate_id": 167,
+      "decision": "reject",
+      "reason": "score 0.101 < 0.3",
+      "score": 0.10091551393270493,
+      "backend": "rule",
+      "raw_output": {
+        "mock_vlm": false
+      },
+      "created_at": "2026-11-05T14:50:44.211226",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 168,
+      "candidate_id": 168,
+      "decision": "accept",
+      "reason": "passed score + IoU dedup (rule stand-in for Qwen3-VL)",
+      "score": 0.908149242401123,
+      "backend": "rule",
+      "raw_output": {
+        "note": "MOCK/rule — not Qwen3-VL",
+        "query": "the largest bus",
+        "query_type": "referring"
+      },
+      "created_at": "2026-11-05T14:50:47.272732",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 169,
+      "candidate_id": 169,
+      "decision": "duplicate",
+      "reason": "IoU>=0.7 with proposal[0] (ExpertA_yolo_world)",
+      "score": 0.7331628799438477,
+      "backend": "rule",
+      "raw_output": {
+        "duplicate_of": 0
+      },
+      "created_at": "2026-11-05T14:50:47.273143",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 170,
+      "candidate_id": 170,
+      "decision": "reject",
+      "reason": "score 0.101 < 0.3",
+      "score": 0.10130828619003296,
+      "backend": "rule",
+      "raw_output": {
+        "mock_vlm": false
+      },
+      "created_at": "2026-11-05T14:50:47.273307",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 171,
+      "candidate_id": 171,
+      "decision": "reject",
+      "reason": "score 0.130 < 0.3",
+      "score": 0.13028666377067566,
+      "backend": "rule",
+      "raw_output": {
+        "mock_vlm": false
+      },
+      "created_at": "2026-11-05T14:50:47.273462",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 172,
+      "candidate_id": 172,
+      "decision": "reject",
+      "reason": "score 0.114 < 0.3",
+      "score": 0.11363192647695541,
+      "backend": "rule",
+      "raw_output": {
+        "mock_vlm": false
+      },
+      "created_at": "2026-11-05T14:50:47.273645",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 173,
+      "candidate_id": 173,
+      "decision": "reject",
+      "reason": "score 0.118 < 0.3",
+      "score": 0.11763051897287369,
+      "backend": "rule",
+      "raw_output": {
+        "mock_vlm": false
+      },
+      "created_at": "2026-11-05T14:50:47.273810",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    }
+  ],
+  "instance_link": [
+    {
+      "id": 128,
+      "query_id": 82,
+      "candidate_id": 152,
+      "verification_id": 152,
+      "instance_uid": "inst-fd02375904d5",
+      "x1": 50.25969696044922,
+      "y1": 398.4804992675781,
+      "x2": 247.4724884033203,
+      "y2": 904.8421630859375,
+      "created_at": "2026-11-05T14:50:37.245019",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 129,
+      "query_id": 82,
+      "candidate_id": 153,
+      "verification_id": 153,
+      "instance_uid": "inst-4d7b01a7ca00",
+      "x1": 223.83517456054688,
+      "y1": 406.80035400390625,
+      "x2": 346.0296325683594,
+      "y2": 860.6427001953125,
+      "created_at": "2026-11-05T14:50:37.245596",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 130,
+      "query_id": 82,
+      "candidate_id": 154,
+      "verification_id": 154,
+      "instance_uid": "inst-1a90df3f06a8",
+      "x1": 667.2506103515625,
+      "y1": 388.1216125488281,
+      "x2": 810.0,
+      "y2": 879.4717407226562,
+      "created_at": "2026-11-05T14:50:37.246001",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 131,
+      "query_id": 82,
+      "candidate_id": 155,
+      "verification_id": 155,
+      "instance_uid": "inst-f32d0a21acc3",
+      "x1": 0.0,
+      "y1": 483.4530944824219,
+      "x2": 79.10628509521484,
+      "y2": 887.3857421875,
+      "created_at": "2026-11-05T14:50:37.246357",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 132,
+      "query_id": 83,
+      "candidate_id": 157,
+      "verification_id": 157,
+      "instance_uid": "inst-131c6f045e44",
+      "x1": 1.934743881225586,
+      "y1": 231.1337127685547,
+      "x2": 807.4843139648438,
+      "y2": 745.04296875,
+      "created_at": "2026-11-05T14:50:40.823027",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 133,
+      "query_id": 84,
+      "candidate_id": 163,
+      "verification_id": 163,
+      "instance_uid": "inst-67121cae5e80",
+      "x1": 50.25969696044922,
+      "y1": 398.4804992675781,
+      "x2": 247.4724884033203,
+      "y2": 904.8421630859375,
+      "created_at": "2026-11-05T14:50:44.209929",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 134,
+      "query_id": 84,
+      "candidate_id": 164,
+      "verification_id": 164,
+      "instance_uid": "inst-ba8746445897",
+      "x1": 223.83517456054688,
+      "y1": 406.80035400390625,
+      "x2": 346.0296325683594,
+      "y2": 860.6427001953125,
+      "created_at": "2026-11-05T14:50:44.210310",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 135,
+      "query_id": 84,
+      "candidate_id": 165,
+      "verification_id": 165,
+      "instance_uid": "inst-e6cc773a9bc1",
+      "x1": 667.2506103515625,
+      "y1": 388.1216125488281,
+      "x2": 810.0,
+      "y2": 879.4717407226562,
+      "created_at": "2026-11-05T14:50:44.210657",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 136,
+      "query_id": 84,
+      "candidate_id": 166,
+      "verification_id": 166,
+      "instance_uid": "inst-41916c13afe1",
+      "x1": 0.0,
+      "y1": 483.4530029296875,
+      "x2": 79.10628509521484,
+      "y2": 887.3857421875,
+      "created_at": "2026-11-05T14:50:44.211060",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 137,
+      "query_id": 85,
+      "candidate_id": 168,
+      "verification_id": 168,
+      "instance_uid": "inst-e06dd926cea1",
+      "x1": 1.934743881225586,
+      "y1": 231.1337127685547,
+      "x2": 807.4843139648438,
+      "y2": 745.04296875,
+      "created_at": "2026-11-05T14:50:47.272967",
+      "run_id": "run-20261105T145029Z-ccda6ad8",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    }
+  ],
+  "mask_alpha": []
+}

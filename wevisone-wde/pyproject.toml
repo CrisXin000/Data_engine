@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wevisone-wde"
+version = "0.1.0"
+description = "WeVisOne-VL Data Engine (WDE) MVP — M0+M1 mock pipeline"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "Apache-2.0" }
+authors = [{ name = "WeVisOne-WDE MVP" }]
+dependencies = [
+  "sqlalchemy>=2.0",
+  "pydantic>=2.0",
+  "pydantic-settings>=2.0",
+  "pyyaml>=6.0",
+  "click>=8.1",
+  "pillow>=10.0",
+  "numpy>=1.26",
+  "nltk>=3.8",
+  "rich>=13.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+# Real open-vocab detectors (CPU). Install torch/torchvision from the CPU wheel
+# index first — see scripts/setup_real_detectors.sh — then: pip install -e ".[real]"
+real = [
+  "ultralytics>=8.0",
+  "transformers>=4.40",
+  "ftfy>=6.0",
+]
+
+[project.scripts]
+wde = "wde.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+wde = ["py.typed"]

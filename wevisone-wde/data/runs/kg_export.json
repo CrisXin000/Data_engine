@@ -1,0 +1,465 @@
+{
+  "graph_version": "kg-v0",
+  "nodes": [
+    {
+      "id": 1,
+      "canonical": "dog",
+      "synset": "dog.n.01",
+      "aliases": [
+        "canine",
+        "puppy",
+        "hound"
+      ],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 2,
+      "canonical": "cat",
+      "synset": "cat.n.01",
+      "aliases": [
+        "feline",
+        "kitten"
+      ],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 3,
+      "canonical": "car",
+      "synset": "car.n.01",
+      "aliases": [
+        "automobile",
+        "auto",
+        "vehicle",
+        "scarlet rectangle"
+      ],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 4,
+      "canonical": "bicycle",
+      "synset": "bicycle.n.01",
+      "aliases": [
+        "bike",
+        "cycle"
+      ],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 5,
+      "canonical": "person",
+      "synset": "person.n.01",
+      "aliases": [
+        "human",
+        "people",
+        "man",
+        "woman"
+      ],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 6,
+      "canonical": "chair",
+      "synset": "chair.n.01",
+      "aliases": [
+        "seat"
+      ],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 7,
+      "canonical": "table",
+      "synset": "table.n.02",
+      "aliases": [
+        "desk"
+      ],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 8,
+      "canonical": "bottle",
+      "synset": "bottle.n.01",
+      "aliases": [],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 9,
+      "canonical": "cup",
+      "synset": "cup.n.01",
+      "aliases": [
+        "mug"
+      ],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 10,
+      "canonical": "book",
+      "synset": "book.n.01",
+      "aliases": [],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 11,
+      "canonical": "bird",
+      "synset": "bird.n.01",
+      "aliases": [],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 12,
+      "canonical": "horse",
+      "synset": "horse.n.01",
+      "aliases": [],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 13,
+      "canonical": "sheep",
+      "synset": "sheep.n.01",
+      "aliases": [],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 14,
+      "canonical": "cow",
+      "synset": "cow.n.01",
+      "aliases": [
+        "cattle"
+      ],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 15,
+      "canonical": "airplane",
+      "synset": "airplane.n.01",
+      "aliases": [
+        "plane",
+        "aircraft"
+      ],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 16,
+      "canonical": "bus",
+      "synset": "bus.n.01",
+      "aliases": [],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 17,
+      "canonical": "train",
+      "synset": "train.n.01",
+      "aliases": [],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 18,
+      "canonical": "truck",
+      "synset": "truck.n.01",
+      "aliases": [
+        "lorry"
+      ],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 19,
+      "canonical": "boat",
+      "synset": "boat.n.01",
+      "aliases": [
+        "ship"
+      ],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 20,
+      "canonical": "traffic light",
+      "synset": "traffic_light.n.01",
+      "aliases": [
+        "stoplight"
+      ],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 21,
+      "canonical": "fire hydrant",
+      "synset": "fire_hydrant.n.01",
+      "aliases": [
+        "hydrant"
+      ],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 22,
+      "canonical": "stop sign",
+      "synset": "stop_sign.n.01",
+      "aliases": [],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 23,
+      "canonical": "bench",
+      "synset": "bench.n.01",
+      "aliases": [],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 24,
+      "canonical": "backpack",
+      "synset": "backpack.n.01",
+      "aliases": [
+        "rucksack"
+      ],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 25,
+      "canonical": "umbrella",
+      "synset": "umbrella.n.01",
+      "aliases": [],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 26,
+      "canonical": "handbag",
+      "synset": "handbag.n.01",
+      "aliases": [
+        "purse"
+      ],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 27,
+      "canonical": "suitcase",
+      "synset": "suitcase.n.01",
+      "aliases": [
+        "luggage"
+      ],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 28,
+      "canonical": "frisbee",
+      "synset": "frisbee.n.01",
+      "aliases": [],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 29,
+      "canonical": "skis",
+      "synset": "skis.n.01",
+      "aliases": [
+        "ski"
+      ],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 30,
+      "canonical": "snowboard",
+      "synset": "snowboard.n.01",
+      "aliases": [],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 31,
+      "canonical": "sports ball",
+      "synset": "sports_ball.n.01",
+      "aliases": [
+        "ball"
+      ],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 32,
+      "canonical": "kite",
+      "synset": "kite.n.01",
+      "aliases": [],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 33,
+      "canonical": "baseball bat",
+      "synset": "baseball_bat.n.01",
+      "aliases": [],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 34,
+      "canonical": "skateboard",
+      "synset": "skateboard.n.01",
+      "aliases": [],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 35,
+      "canonical": "surfboard",
+      "synset": "surfboard.n.01",
+      "aliases": [],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 36,
+      "canonical": "tennis racket",
+      "synset": "tennis_racket.n.01",
+      "aliases": [
+        "racquet"
+      ],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 37,
+      "canonical": "fork",
+      "synset": "fork.n.01",
+      "aliases": [],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 38,
+      "canonical": "knife",
+      "synset": "knife.n.01",
+      "aliases": [],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 39,
+      "canonical": "spoon",
+      "synset": "spoon.n.01",
+      "aliases": [],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 40,
+      "canonical": "bowl",
+      "synset": "bowl.n.01",
+      "aliases": [],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 41,
+      "canonical": "banana",
+      "synset": "banana.n.01",
+      "aliases": [],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 42,
+      "canonical": "apple",
+      "synset": "apple.n.01",
+      "aliases": [],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 43,
+      "canonical": "sandwich",
+      "synset": "sandwich.n.01",
+      "aliases": [],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 44,
+      "canonical": "orange",
+      "synset": "orange.n.01",
+      "aliases": [],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 45,
+      "canonical": "broccoli",
+      "synset": "broccoli.n.01",
+      "aliases": [],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 46,
+      "canonical": "carrot",
+      "synset": "carrot.n.01",
+      "aliases": [],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 47,
+      "canonical": "red rectangle",
+      "synset": null,
+      "aliases": [
+        "red box",
+        "red block"
+      ],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 48,
+      "canonical": "blue circle",
+      "synset": null,
+      "aliases": [
+        "blue disk",
+        "blue ball"
+      ],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 49,
+      "canonical": "green triangle",
+      "synset": null,
+      "aliases": [],
+      "node_type": "concept",
+      "valid_status": "valid"
+    },
+    {
+      "id": 50,
+      "canonical": "yellow square",
+      "synset": null,
+      "aliases": [
+        "yellow box"
+      ],
+      "node_type": "concept",
+      "valid_status": "valid"
+    }
+  ],
+  "edges": []
+}

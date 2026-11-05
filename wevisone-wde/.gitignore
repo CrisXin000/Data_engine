@@ -1,0 +1,19 @@
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+data/wde.sqlite
+data/wde.sqlite-*
+data/runs/
+*.pt
+.pytest_cache/
+.mypy_cache/
+nltk_data/
+
+# Real detector weights / caches
+*.pt
+data/models/
+.cache/
+data/gold/images_real_smoke/

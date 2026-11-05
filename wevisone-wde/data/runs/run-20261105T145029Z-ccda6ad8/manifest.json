@@ -1,0 +1,46 @@
+{
+  "run_id": "run-20261105T145029Z-ccda6ad8",
+  "stats": {
+    "run_id": "run-20261105T145029Z-ccda6ad8",
+    "data_version": "m1-mvp-0.1",
+    "mode": "real",
+    "images": 1,
+    "queries": 5,
+    "candidates": 22,
+    "verifications": 22,
+    "instance_links": 10,
+    "masks": 0,
+    "alphas": 0
+  },
+  "config_snapshot": {
+    "models": {
+      "mode": "real",
+      "discover": {
+        "category_tagger": "yolo_world",
+        "referring_generator": "mock"
+      },
+      "propose": {
+        "expert_a": "yolo_world",
+        "expert_b": "owlv2"
+      },
+      "verify": {
+        "backend": "rule"
+      },
+      "segment": {
+        "backend": "stub"
+      },
+      "matte": {
+        "backend": "stub"
+      }
+    },
+    "pipeline": {
+      "iou_dedup_threshold": 0.7,
+      "accept_min_score": 0.3,
+      "skip_segment": true,
+      "skip_matte": true
+    },
+    "data_version": "m1-mvp-0.1",
+    "graph_version": "kg-v0"
+  },
+  "note": "M1 pipeline — mode=real; real experts are YOLO-World / OWLv2 open-source substitutes (NOT paper SAM3 / in-house DINO)"
+}

@@ -1,0 +1,2302 @@
+{
+  "run_id": "run-20261105T131956Z-06cfe48a",
+  "data_version": "m1-mvp-0.1",
+  "image": [
+    {
+      "id": 1,
+      "path": "/workspace/wevisone-wde/data/gold/images/absent_target.png",
+      "width": 640,
+      "height": 480,
+      "source": "gold",
+      "sha256": "fe8e00c54ce376fe73aaea6551660534bfa08c459c82a1431fc03c48f36b3a2f",
+      "created_at": "2026-11-05T13:19:30.613397",
+      "run_id": "gold-ingest",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 2,
+      "path": "/workspace/wevisone-wde/data/gold/images/dense_small.png",
+      "width": 640,
+      "height": 480,
+      "source": "gold",
+      "sha256": "114afbe58e85cc5ab402a28578c81605820f6bf269cc8ebf1308b6837aed89b4",
+      "created_at": "2026-11-05T13:19:30.618275",
+      "run_id": "gold-ingest",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 3,
+      "path": "/workspace/wevisone-wde/data/gold/images/multi_shapes.png",
+      "width": 640,
+      "height": 480,
+      "source": "gold",
+      "sha256": "5d7687ef337a5305dc3746a5206075c47b64ef6cc34b342447ac458c56bf3291",
+      "created_at": "2026-11-05T13:19:30.619821",
+      "run_id": "gold-ingest",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 4,
+      "path": "/workspace/wevisone-wde/data/gold/images/referring_left_right.png",
+      "width": 640,
+      "height": 480,
+      "source": "gold",
+      "sha256": "60e9f808c7ed6fbe825bd9b02a350fbdfddbf5ba8bbd1e100a604a56282235ba",
+      "created_at": "2026-11-05T13:19:30.622221",
+      "run_id": "gold-ingest",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 5,
+      "path": "/workspace/wevisone-wde/data/gold/images/single_red_rect.png",
+      "width": 640,
+      "height": 480,
+      "source": "gold",
+      "sha256": "5678aab4337277b787cc39818e7f762254901ad55fe7c4150d14afd558506d3d",
+      "created_at": "2026-11-05T13:19:30.623809",
+      "run_id": "gold-ingest",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    }
+  ],
+  "query": [
+    {
+      "id": 31,
+      "image_id": 1,
+      "text": "red rectangle",
+      "query_type": "category",
+      "language": "en",
+      "graph_node_id": 47,
+      "source": "discover",
+      "is_negative": false,
+      "meta": {
+        "backend": "mock_category_tagger",
+        "note": "MOCK — not Tokenize Anything"
+      },
+      "created_at": "2026-11-05T13:19:56.684091",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 32,
+      "image_id": 1,
+      "text": "the red rectangle on the left",
+      "query_type": "referring",
+      "language": "en",
+      "graph_node_id": 47,
+      "source": "discover",
+      "is_negative": false,
+      "meta": {
+        "backend": "mock_referring",
+        "note": "MOCK template — Qwen3-VL interface reserved",
+        "base_category": "red rectangle"
+      },
+      "created_at": "2026-11-05T13:19:56.691106",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 33,
+      "image_id": 1,
+      "text": "the purple hexagon that does not exist",
+      "query_type": "referring",
+      "language": "en",
+      "graph_node_id": null,
+      "source": "discover",
+      "is_negative": true,
+      "meta": {
+        "backend": "mock_referring",
+        "is_negative_hint": true,
+        "note": "MOCK absent-target referring query"
+      },
+      "created_at": "2026-11-05T13:19:56.693205",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 34,
+      "image_id": 2,
+      "text": "blue circle",
+      "query_type": "category",
+      "language": "en",
+      "graph_node_id": 48,
+      "source": "discover",
+      "is_negative": false,
+      "meta": {
+        "backend": "mock_category_tagger",
+        "note": "MOCK — not Tokenize Anything"
+      },
+      "created_at": "2026-11-05T13:19:56.700574",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 35,
+      "image_id": 2,
+      "text": "the blue circle on the left",
+      "query_type": "referring",
+      "language": "en",
+      "graph_node_id": 48,
+      "source": "discover",
+      "is_negative": false,
+      "meta": {
+        "backend": "mock_referring",
+        "note": "MOCK template — Qwen3-VL interface reserved",
+        "base_category": "blue circle"
+      },
+      "created_at": "2026-11-05T13:19:56.703264",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 36,
+      "image_id": 2,
+      "text": "the purple hexagon that does not exist",
+      "query_type": "referring",
+      "language": "en",
+      "graph_node_id": null,
+      "source": "discover",
+      "is_negative": true,
+      "meta": {
+        "backend": "mock_referring",
+        "is_negative_hint": true,
+        "note": "MOCK absent-target referring query"
+      },
+      "created_at": "2026-11-05T13:19:56.706077",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 37,
+      "image_id": 3,
+      "text": "blue circle",
+      "query_type": "category",
+      "language": "en",
+      "graph_node_id": 48,
+      "source": "discover",
+      "is_negative": false,
+      "meta": {
+        "backend": "mock_category_tagger",
+        "note": "MOCK — not Tokenize Anything"
+      },
+      "created_at": "2026-11-05T13:19:56.710576",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 38,
+      "image_id": 3,
+      "text": "green triangle",
+      "query_type": "category",
+      "language": "en",
+      "graph_node_id": 49,
+      "source": "discover",
+      "is_negative": false,
+      "meta": {
+        "backend": "mock_category_tagger",
+        "note": "MOCK — not Tokenize Anything"
+      },
+      "created_at": "2026-11-05T13:19:56.713198",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 39,
+      "image_id": 3,
+      "text": "red rectangle",
+      "query_type": "category",
+      "language": "en",
+      "graph_node_id": 47,
+      "source": "discover",
+      "is_negative": false,
+      "meta": {
+        "backend": "mock_category_tagger",
+        "note": "MOCK — not Tokenize Anything"
+      },
+      "created_at": "2026-11-05T13:19:56.715567",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 40,
+      "image_id": 3,
+      "text": "the blue circle on the left",
+      "query_type": "referring",
+      "language": "en",
+      "graph_node_id": 48,
+      "source": "discover",
+      "is_negative": false,
+      "meta": {
+        "backend": "mock_referring",
+        "note": "MOCK template — Qwen3-VL interface reserved",
+        "base_category": "blue circle"
+      },
+      "created_at": "2026-11-05T13:19:56.717480",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 41,
+      "image_id": 3,
+      "text": "the largest green triangle",
+      "query_type": "referring",
+      "language": "en",
+      "graph_node_id": 49,
+      "source": "discover",
+      "is_negative": false,
+      "meta": {
+        "backend": "mock_referring",
+        "note": "MOCK template — Qwen3-VL interface reserved",
+        "base_category": "green triangle"
+      },
+      "created_at": "2026-11-05T13:19:56.719361",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 42,
+      "image_id": 3,
+      "text": "the red rectangle near the center",
+      "query_type": "referring",
+      "language": "en",
+      "graph_node_id": 47,
+      "source": "discover",
+      "is_negative": false,
+      "meta": {
+        "backend": "mock_referring",
+        "note": "MOCK template — Qwen3-VL interface reserved",
+        "base_category": "red rectangle"
+      },
+      "created_at": "2026-11-05T13:19:56.721453",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 43,
+      "image_id": 3,
+      "text": "the purple hexagon that does not exist",
+      "query_type": "referring",
+      "language": "en",
+      "graph_node_id": null,
+      "source": "discover",
+      "is_negative": true,
+      "meta": {
+        "backend": "mock_referring",
+        "is_negative_hint": true,
+        "note": "MOCK absent-target referring query"
+      },
+      "created_at": "2026-11-05T13:19:56.723338",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 44,
+      "image_id": 4,
+      "text": "yellow square",
+      "query_type": "category",
+      "language": "en",
+      "graph_node_id": 50,
+      "source": "discover",
+      "is_negative": false,
+      "meta": {
+        "backend": "mock_category_tagger",
+        "note": "MOCK — not Tokenize Anything"
+      },
+      "created_at": "2026-11-05T13:19:56.726514",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 45,
+      "image_id": 4,
+      "text": "the yellow square on the left",
+      "query_type": "referring",
+      "language": "en",
+      "graph_node_id": 50,
+      "source": "discover",
+      "is_negative": false,
+      "meta": {
+        "backend": "mock_referring",
+        "note": "MOCK template — Qwen3-VL interface reserved",
+        "base_category": "yellow square"
+      },
+      "created_at": "2026-11-05T13:19:56.728678",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 46,
+      "image_id": 4,
+      "text": "the purple hexagon that does not exist",
+      "query_type": "referring",
+      "language": "en",
+      "graph_node_id": null,
+      "source": "discover",
+      "is_negative": true,
+      "meta": {
+        "backend": "mock_referring",
+        "is_negative_hint": true,
+        "note": "MOCK absent-target referring query"
+      },
+      "created_at": "2026-11-05T13:19:56.731429",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 47,
+      "image_id": 5,
+      "text": "red rectangle",
+      "query_type": "category",
+      "language": "en",
+      "graph_node_id": 47,
+      "source": "discover",
+      "is_negative": false,
+      "meta": {
+        "backend": "mock_category_tagger",
+        "note": "MOCK — not Tokenize Anything"
+      },
+      "created_at": "2026-11-05T13:19:56.735597",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 48,
+      "image_id": 5,
+      "text": "the red rectangle on the left",
+      "query_type": "referring",
+      "language": "en",
+      "graph_node_id": 47,
+      "source": "discover",
+      "is_negative": false,
+      "meta": {
+        "backend": "mock_referring",
+        "note": "MOCK template — Qwen3-VL interface reserved",
+        "base_category": "red rectangle"
+      },
+      "created_at": "2026-11-05T13:19:56.737710",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 49,
+      "image_id": 5,
+      "text": "the purple hexagon that does not exist",
+      "query_type": "referring",
+      "language": "en",
+      "graph_node_id": null,
+      "source": "discover",
+      "is_negative": true,
+      "meta": {
+        "backend": "mock_referring",
+        "is_negative_hint": true,
+        "note": "MOCK absent-target referring query"
+      },
+      "created_at": "2026-11-05T13:19:56.740196",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    }
+  ],
+  "candidate": [
+    {
+      "id": 38,
+      "query_id": 31,
+      "expert_name": "ExpertA_mock_sam3",
+      "x1": 115.20000000000002,
+      "y1": 110.4,
+      "x2": 230.4,
+      "y2": 196.79999999999998,
+      "score": 0.8200000000000001,
+      "raw_output": {
+        "mock": true,
+        "stands_in_for": "SAM3 / SAM3-Agent",
+        "query": "red rectangle",
+        "query_type": "category"
+      },
+      "created_at": "2026-11-05T13:19:56.685665",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 39,
+      "query_id": 31,
+      "expert_name": "ExpertA_mock_sam3",
+      "x1": 339.20000000000005,
+      "y1": 230.40000000000003,
+      "x2": 454.4,
+      "y2": 316.8,
+      "score": 0.8200000000000001,
+      "raw_output": {
+        "mock": true,
+        "stands_in_for": "SAM3 / SAM3-Agent",
+        "query": "red rectangle",
+        "query_type": "category"
+      },
+      "created_at": "2026-11-05T13:19:56.686237",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 40,
+      "query_id": 31,
+      "expert_name": "ExpertB_mock_dino_ovd",
+      "x1": 156.16000000000003,
+      "y1": 119.03999999999999,
+      "x2": 284.16,
+      "y2": 195.84,
+      "score": 0.86,
+      "raw_output": {
+        "mock": true,
+        "stands_in_for": "in-house DINO-style OVD",
+        "query": "red rectangle",
+        "query_type": "category"
+      },
+      "created_at": "2026-11-05T13:19:56.686458",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 41,
+      "query_id": 31,
+      "expert_name": "ExpertB_mock_dino_ovd",
+      "x1": 360.9600000000001,
+      "y1": 224.64000000000001,
+      "x2": 488.9600000000001,
+      "y2": 301.44,
+      "score": 0.86,
+      "raw_output": {
+        "mock": true,
+        "stands_in_for": "in-house DINO-style OVD",
+        "query": "red rectangle",
+        "query_type": "category"
+      },
+      "created_at": "2026-11-05T13:19:56.686648",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 42,
+      "query_id": 32,
+      "expert_name": "ExpertA_mock_sam3",
+      "x1": 108.80000000000001,
+      "y1": 115.19999999999999,
+      "x2": 224.0,
+      "y2": 201.59999999999997,
+      "score": 0.63,
+      "raw_output": {
+        "mock": true,
+        "stands_in_for": "SAM3 / SAM3-Agent",
+        "query": "the red rectangle on the left",
+        "query_type": "referring"
+      },
+      "created_at": "2026-11-05T13:19:56.691473",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 43,
+      "query_id": 32,
+      "expert_name": "ExpertB_mock_dino_ovd",
+      "x1": 130.56000000000003,
+      "y1": 142.07999999999998,
+      "x2": 258.56000000000006,
+      "y2": 218.88,
+      "score": 0.51,
+      "raw_output": {
+        "mock": true,
+        "stands_in_for": "in-house DINO-style OVD",
+        "query": "the red rectangle on the left",
+        "query_type": "referring"
+      },
+      "created_at": "2026-11-05T13:19:56.691682",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 44,
+      "query_id": 34,
+      "expert_name": "ExpertA_mock_sam3",
+      "x1": 108.80000000000001,
+      "y1": 105.60000000000002,
+      "x2": 224.0,
+      "y2": 192.0,
+      "score": 0.6100000000000001,
+      "raw_output": {
+        "mock": true,
+        "stands_in_for": "SAM3 / SAM3-Agent",
+        "query": "blue circle",
+        "query_type": "category"
+      },
+      "created_at": "2026-11-05T13:19:56.700989",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 45,
+      "query_id": 34,
+      "expert_name": "ExpertB_mock_dino_ovd",
+      "x1": 166.40000000000003,
+      "y1": 142.07999999999998,
+      "x2": 294.40000000000003,
+      "y2": 218.88,
+      "score": 0.81,
+      "raw_output": {
+        "mock": true,
+        "stands_in_for": "in-house DINO-style OVD",
+        "query": "blue circle",
+        "query_type": "category"
+      },
+      "created_at": "2026-11-05T13:19:56.701216",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 46,
+      "query_id": 34,
+      "expert_name": "ExpertB_mock_dino_ovd",
+      "x1": 371.20000000000005,
+      "y1": 247.68000000000004,
+      "x2": 499.20000000000005,
+      "y2": 324.48,
+      "score": 0.81,
+      "raw_output": {
+        "mock": true,
+        "stands_in_for": "in-house DINO-style OVD",
+        "query": "blue circle",
+        "query_type": "category"
+      },
+      "created_at": "2026-11-05T13:19:56.701400",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 47,
+      "query_id": 35,
+      "expert_name": "ExpertA_mock_sam3",
+      "x1": 121.60000000000002,
+      "y1": 105.60000000000002,
+      "x2": 236.8,
+      "y2": 192.0,
+      "score": 0.56,
+      "raw_output": {
+        "mock": true,
+        "stands_in_for": "SAM3 / SAM3-Agent",
+        "query": "the blue circle on the left",
+        "query_type": "referring"
+      },
+      "created_at": "2026-11-05T13:19:56.703632",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 48,
+      "query_id": 35,
+      "expert_name": "ExpertA_mock_sam3",
+      "x1": 345.6,
+      "y1": 225.60000000000002,
+      "x2": 460.79999999999995,
+      "y2": 312.0,
+      "score": 0.56,
+      "raw_output": {
+        "mock": true,
+        "stands_in_for": "SAM3 / SAM3-Agent",
+        "query": "the blue circle on the left",
+        "query_type": "referring"
+      },
+      "created_at": "2026-11-05T13:19:56.703838",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 49,
+      "query_id": 35,
+      "expert_name": "ExpertB_mock_dino_ovd",
+      "x1": 115.20000000000002,
+      "y1": 126.72,
+      "x2": 243.20000000000002,
+      "y2": 203.52,
+      "score": 0.55,
+      "raw_output": {
+        "mock": true,
+        "stands_in_for": "in-house DINO-style OVD",
+        "query": "the blue circle on the left",
+        "query_type": "referring"
+      },
+      "created_at": "2026-11-05T13:19:56.704021",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 50,
+      "query_id": 37,
+      "expert_name": "ExpertA_mock_sam3",
+      "x1": 115.20000000000002,
+      "y1": 110.4,
+      "x2": 230.4,
+      "y2": 196.79999999999998,
+      "score": 0.92,
+      "raw_output": {
+        "mock": true,
+        "stands_in_for": "SAM3 / SAM3-Agent",
+        "query": "blue circle",
+        "query_type": "category"
+      },
+      "created_at": "2026-11-05T13:19:56.710976",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 51,
+      "query_id": 37,
+      "expert_name": "ExpertA_mock_sam3",
+      "x1": 339.20000000000005,
+      "y1": 230.40000000000003,
+      "x2": 454.4,
+      "y2": 316.8,
+      "score": 0.92,
+      "raw_output": {
+        "mock": true,
+        "stands_in_for": "SAM3 / SAM3-Agent",
+        "query": "blue circle",
+        "query_type": "category"
+      },
+      "created_at": "2026-11-05T13:19:56.711197",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 52,
+      "query_id": 37,
+      "expert_name": "ExpertB_mock_dino_ovd",
+      "x1": 130.56000000000003,
+      "y1": 145.92,
+      "x2": 258.56000000000006,
+      "y2": 222.72,
+      "score": 0.61,
+      "raw_output": {
+        "mock": true,
+        "stands_in_for": "in-house DINO-style OVD",
+        "query": "blue circle",
+        "query_type": "category"
+      },
+      "created_at": "2026-11-05T13:19:56.711395",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 53,
+      "query_id": 38,
+      "expert_name": "ExpertA_mock_sam3",
+      "x1": 140.8,
+      "y1": 100.80000000000001,
+      "x2": 256.0,
+      "y2": 187.2,
+      "score": 0.6000000000000001,
+      "raw_output": {
+        "mock": true,
+        "stands_in_for": "SAM3 / SAM3-Agent",
+        "query": "green triangle",
+        "query_type": "category"
+      },
+      "created_at": "2026-11-05T13:19:56.713526",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 54,
+      "query_id": 38,
+      "expert_name": "ExpertA_mock_sam3",
+      "x1": 364.79999999999995,
+      "y1": 220.8,
+      "x2": 480.0,
+      "y2": 307.2,
+      "score": 0.6000000000000001,
+      "raw_output": {
+        "mock": true,
+        "stands_in_for": "SAM3 / SAM3-Agent",
+        "query": "green triangle",
+        "query_type": "category"
+      },
+      "created_at": "2026-11-05T13:19:56.713724",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 55,
+      "query_id": 38,
+      "expert_name": "ExpertB_mock_dino_ovd",
+      "x1": 130.56000000000003,
+      "y1": 115.19999999999999,
+      "x2": 258.56000000000006,
+      "y2": 192.0,
+      "score": 0.56,
+      "raw_output": {
+        "mock": true,
+        "stands_in_for": "in-house DINO-style OVD",
+        "query": "green triangle",
+        "query_type": "category"
+      },
+      "created_at": "2026-11-05T13:19:56.713901",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 56,
+      "query_id": 39,
+      "expert_name": "ExpertA_mock_sam3",
+      "x1": 108.80000000000001,
+      "y1": 105.60000000000002,
+      "x2": 224.0,
+      "y2": 192.0,
+      "score": 0.6100000000000001,
+      "raw_output": {
+        "mock": true,
+        "stands_in_for": "SAM3 / SAM3-Agent",
+        "query": "red rectangle",
+        "query_type": "category"
+      },
+      "created_at": "2026-11-05T13:19:56.715871",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 57,
+      "query_id": 39,
+      "expert_name": "ExpertB_mock_dino_ovd",
+      "x1": 135.68000000000004,
+      "y1": 122.88,
+      "x2": 263.68000000000006,
+      "y2": 199.68,
+      "score": 0.5,
+      "raw_output": {
+        "mock": true,
+        "stands_in_for": "in-house DINO-style OVD",
+        "query": "red rectangle",
+        "query_type": "category"
+      },
+      "created_at": "2026-11-05T13:19:56.716068",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 58,
+      "query_id": 40,
+      "expert_name": "ExpertA_mock_sam3",
+      "x1": 108.80000000000001,
+      "y1": 105.60000000000002,
+      "x2": 224.0,
+      "y2": 192.0,
+      "score": 0.7100000000000001,
+      "raw_output": {
+        "mock": true,
+        "stands_in_for": "SAM3 / SAM3-Agent",
+        "query": "the blue circle on the left",
+        "query_type": "referring"
+      },
+      "created_at": "2026-11-05T13:19:56.717791",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 59,
+      "query_id": 40,
+      "expert_name": "ExpertB_mock_dino_ovd",
+      "x1": 130.56000000000003,
+      "y1": 126.72,
+      "x2": 258.56000000000006,
+      "y2": 203.52,
+      "score": 0.8200000000000001,
+      "raw_output": {
+        "mock": true,
+        "stands_in_for": "in-house DINO-style OVD",
+        "query": "the blue circle on the left",
+        "query_type": "referring"
+      },
+      "created_at": "2026-11-05T13:19:56.717982",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 60,
+      "query_id": 41,
+      "expert_name": "ExpertA_mock_sam3",
+      "x1": 121.60000000000002,
+      "y1": 120.0,
+      "x2": 236.8,
+      "y2": 206.39999999999998,
+      "score": 0.79,
+      "raw_output": {
+        "mock": true,
+        "stands_in_for": "SAM3 / SAM3-Agent",
+        "query": "the largest green triangle",
+        "query_type": "referring"
+      },
+      "created_at": "2026-11-05T13:19:56.719743",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 61,
+      "query_id": 41,
+      "expert_name": "ExpertB_mock_dino_ovd",
+      "x1": 130.56000000000003,
+      "y1": 119.03999999999999,
+      "x2": 258.56000000000006,
+      "y2": 195.84,
+      "score": 0.9,
+      "raw_output": {
+        "mock": true,
+        "stands_in_for": "in-house DINO-style OVD",
+        "query": "the largest green triangle",
+        "query_type": "referring"
+      },
+      "created_at": "2026-11-05T13:19:56.719945",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 62,
+      "query_id": 42,
+      "expert_name": "ExpertA_mock_sam3",
+      "x1": 128.0,
+      "y1": 115.19999999999999,
+      "x2": 243.2,
+      "y2": 201.59999999999997,
+      "score": 0.8300000000000001,
+      "raw_output": {
+        "mock": true,
+        "stands_in_for": "SAM3 / SAM3-Agent",
+        "query": "the red rectangle near the center",
+        "query_type": "referring"
+      },
+      "created_at": "2026-11-05T13:19:56.721804",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 63,
+      "query_id": 42,
+      "expert_name": "ExpertB_mock_dino_ovd",
+      "x1": 120.32000000000002,
+      "y1": 130.55999999999997,
+      "x2": 248.32000000000002,
+      "y2": 207.35999999999999,
+      "score": 0.62,
+      "raw_output": {
+        "mock": true,
+        "stands_in_for": "in-house DINO-style OVD",
+        "query": "the red rectangle near the center",
+        "query_type": "referring"
+      },
+      "created_at": "2026-11-05T13:19:56.722005",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 64,
+      "query_id": 44,
+      "expert_name": "ExpertA_mock_sam3",
+      "x1": 108.80000000000001,
+      "y1": 100.80000000000001,
+      "x2": 224.0,
+      "y2": 187.2,
+      "score": 0.55,
+      "raw_output": {
+        "mock": true,
+        "stands_in_for": "SAM3 / SAM3-Agent",
+        "query": "yellow square",
+        "query_type": "category"
+      },
+      "created_at": "2026-11-05T13:19:56.726931",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 65,
+      "query_id": 44,
+      "expert_name": "ExpertB_mock_dino_ovd",
+      "x1": 156.16000000000003,
+      "y1": 115.19999999999999,
+      "x2": 284.16,
+      "y2": 192.0,
+      "score": 0.74,
+      "raw_output": {
+        "mock": true,
+        "stands_in_for": "in-house DINO-style OVD",
+        "query": "yellow square",
+        "query_type": "category"
+      },
+      "created_at": "2026-11-05T13:19:56.727167",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 66,
+      "query_id": 45,
+      "expert_name": "ExpertA_mock_sam3",
+      "x1": 128.0,
+      "y1": 100.80000000000001,
+      "x2": 243.2,
+      "y2": 187.2,
+      "score": 0.6000000000000001,
+      "raw_output": {
+        "mock": true,
+        "stands_in_for": "SAM3 / SAM3-Agent",
+        "query": "the yellow square on the left",
+        "query_type": "referring"
+      },
+      "created_at": "2026-11-05T13:19:56.729008",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 67,
+      "query_id": 45,
+      "expert_name": "ExpertA_mock_sam3",
+      "x1": 352.0,
+      "y1": 220.8,
+      "x2": 467.20000000000005,
+      "y2": 307.2,
+      "score": 0.6000000000000001,
+      "raw_output": {
+        "mock": true,
+        "stands_in_for": "SAM3 / SAM3-Agent",
+        "query": "the yellow square on the left",
+        "query_type": "referring"
+      },
+      "created_at": "2026-11-05T13:19:56.729201",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 68,
+      "query_id": 45,
+      "expert_name": "ExpertB_mock_dino_ovd",
+      "x1": 130.56000000000003,
+      "y1": 119.03999999999999,
+      "x2": 258.56000000000006,
+      "y2": 195.84,
+      "score": 0.63,
+      "raw_output": {
+        "mock": true,
+        "stands_in_for": "in-house DINO-style OVD",
+        "query": "the yellow square on the left",
+        "query_type": "referring"
+      },
+      "created_at": "2026-11-05T13:19:56.729378",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 69,
+      "query_id": 45,
+      "expert_name": "ExpertB_mock_dino_ovd",
+      "x1": 335.36000000000007,
+      "y1": 224.64000000000001,
+      "x2": 463.36000000000007,
+      "y2": 301.44,
+      "score": 0.63,
+      "raw_output": {
+        "mock": true,
+        "stands_in_for": "in-house DINO-style OVD",
+        "query": "the yellow square on the left",
+        "query_type": "referring"
+      },
+      "created_at": "2026-11-05T13:19:56.729547",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 70,
+      "query_id": 47,
+      "expert_name": "ExpertA_mock_sam3",
+      "x1": 102.4,
+      "y1": 115.19999999999999,
+      "x2": 217.6,
+      "y2": 201.59999999999997,
+      "score": 0.63,
+      "raw_output": {
+        "mock": true,
+        "stands_in_for": "SAM3 / SAM3-Agent",
+        "query": "red rectangle",
+        "query_type": "category"
+      },
+      "created_at": "2026-11-05T13:19:56.735985",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 71,
+      "query_id": 47,
+      "expert_name": "ExpertB_mock_dino_ovd",
+      "x1": 140.8,
+      "y1": 145.92,
+      "x2": 268.8,
+      "y2": 222.72,
+      "score": 0.85,
+      "raw_output": {
+        "mock": true,
+        "stands_in_for": "in-house DINO-style OVD",
+        "query": "red rectangle",
+        "query_type": "category"
+      },
+      "created_at": "2026-11-05T13:19:56.736205",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 72,
+      "query_id": 48,
+      "expert_name": "ExpertA_mock_sam3",
+      "x1": 121.60000000000002,
+      "y1": 120.0,
+      "x2": 236.8,
+      "y2": 206.39999999999998,
+      "score": 0.79,
+      "raw_output": {
+        "mock": true,
+        "stands_in_for": "SAM3 / SAM3-Agent",
+        "query": "the red rectangle on the left",
+        "query_type": "referring"
+      },
+      "created_at": "2026-11-05T13:19:56.738055",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 73,
+      "query_id": 48,
+      "expert_name": "ExpertB_mock_dino_ovd",
+      "x1": 156.16000000000003,
+      "y1": 122.88,
+      "x2": 284.16,
+      "y2": 199.68,
+      "score": 0.9299999999999999,
+      "raw_output": {
+        "mock": true,
+        "stands_in_for": "in-house DINO-style OVD",
+        "query": "the red rectangle on the left",
+        "query_type": "referring"
+      },
+      "created_at": "2026-11-05T13:19:56.738250",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 74,
+      "query_id": 48,
+      "expert_name": "ExpertB_mock_dino_ovd",
+      "x1": 360.9600000000001,
+      "y1": 228.48,
+      "x2": 488.9600000000001,
+      "y2": 305.28,
+      "score": 0.9299999999999999,
+      "raw_output": {
+        "mock": true,
+        "stands_in_for": "in-house DINO-style OVD",
+        "query": "the red rectangle on the left",
+        "query_type": "referring"
+      },
+      "created_at": "2026-11-05T13:19:56.738422",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    }
+  ],
+  "verification": [
+    {
+      "id": 38,
+      "candidate_id": 38,
+      "decision": "accept",
+      "reason": "passed score + IoU dedup (rule stand-in for Qwen3-VL)",
+      "score": 0.8200000000000001,
+      "backend": "rule",
+      "raw_output": {
+        "note": "MOCK/rule — not Qwen3-VL",
+        "query": "red rectangle",
+        "query_type": "category"
+      },
+      "created_at": "2026-11-05T13:19:56.687630",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 39,
+      "candidate_id": 39,
+      "decision": "accept",
+      "reason": "passed score + IoU dedup (rule stand-in for Qwen3-VL)",
+      "score": 0.8200000000000001,
+      "backend": "rule",
+      "raw_output": {
+        "note": "MOCK/rule — not Qwen3-VL",
+        "query": "red rectangle",
+        "query_type": "category"
+      },
+      "created_at": "2026-11-05T13:19:56.689222",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 40,
+      "candidate_id": 40,
+      "decision": "accept",
+      "reason": "passed score + IoU dedup (rule stand-in for Qwen3-VL)",
+      "score": 0.86,
+      "backend": "rule",
+      "raw_output": {
+        "note": "MOCK/rule — not Qwen3-VL",
+        "query": "red rectangle",
+        "query_type": "category"
+      },
+      "created_at": "2026-11-05T13:19:56.689610",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 41,
+      "candidate_id": 41,
+      "decision": "accept",
+      "reason": "passed score + IoU dedup (rule stand-in for Qwen3-VL)",
+      "score": 0.86,
+      "backend": "rule",
+      "raw_output": {
+        "note": "MOCK/rule — not Qwen3-VL",
+        "query": "red rectangle",
+        "query_type": "category"
+      },
+      "created_at": "2026-11-05T13:19:56.689946",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 42,
+      "candidate_id": 42,
+      "decision": "accept",
+      "reason": "passed score + IoU dedup (rule stand-in for Qwen3-VL)",
+      "score": 0.63,
+      "backend": "rule",
+      "raw_output": {
+        "note": "MOCK/rule — not Qwen3-VL",
+        "query": "the red rectangle on the left",
+        "query_type": "referring"
+      },
+      "created_at": "2026-11-05T13:19:56.691888",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 43,
+      "candidate_id": 43,
+      "decision": "accept",
+      "reason": "passed score + IoU dedup (rule stand-in for Qwen3-VL)",
+      "score": 0.51,
+      "backend": "rule",
+      "raw_output": {
+        "note": "MOCK/rule — not Qwen3-VL",
+        "query": "the red rectangle on the left",
+        "query_type": "referring"
+      },
+      "created_at": "2026-11-05T13:19:56.692248",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 44,
+      "candidate_id": 44,
+      "decision": "accept",
+      "reason": "passed score + IoU dedup (rule stand-in for Qwen3-VL)",
+      "score": 0.6100000000000001,
+      "backend": "rule",
+      "raw_output": {
+        "note": "MOCK/rule — not Qwen3-VL",
+        "query": "blue circle",
+        "query_type": "category"
+      },
+      "created_at": "2026-11-05T13:19:56.701600",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 45,
+      "candidate_id": 45,
+      "decision": "accept",
+      "reason": "passed score + IoU dedup (rule stand-in for Qwen3-VL)",
+      "score": 0.81,
+      "backend": "rule",
+      "raw_output": {
+        "note": "MOCK/rule — not Qwen3-VL",
+        "query": "blue circle",
+        "query_type": "category"
+      },
+      "created_at": "2026-11-05T13:19:56.701992",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 46,
+      "candidate_id": 46,
+      "decision": "accept",
+      "reason": "passed score + IoU dedup (rule stand-in for Qwen3-VL)",
+      "score": 0.81,
+      "backend": "rule",
+      "raw_output": {
+        "note": "MOCK/rule — not Qwen3-VL",
+        "query": "blue circle",
+        "query_type": "category"
+      },
+      "created_at": "2026-11-05T13:19:56.702307",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 47,
+      "candidate_id": 47,
+      "decision": "accept",
+      "reason": "passed score + IoU dedup (rule stand-in for Qwen3-VL)",
+      "score": 0.56,
+      "backend": "rule",
+      "raw_output": {
+        "note": "MOCK/rule — not Qwen3-VL",
+        "query": "the blue circle on the left",
+        "query_type": "referring"
+      },
+      "created_at": "2026-11-05T13:19:56.704210",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 48,
+      "candidate_id": 48,
+      "decision": "accept",
+      "reason": "passed score + IoU dedup (rule stand-in for Qwen3-VL)",
+      "score": 0.56,
+      "backend": "rule",
+      "raw_output": {
+        "note": "MOCK/rule — not Qwen3-VL",
+        "query": "the blue circle on the left",
+        "query_type": "referring"
+      },
+      "created_at": "2026-11-05T13:19:56.704717",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 49,
+      "candidate_id": 49,
+      "decision": "accept",
+      "reason": "passed score + IoU dedup (rule stand-in for Qwen3-VL)",
+      "score": 0.55,
+      "backend": "rule",
+      "raw_output": {
+        "note": "MOCK/rule — not Qwen3-VL",
+        "query": "the blue circle on the left",
+        "query_type": "referring"
+      },
+      "created_at": "2026-11-05T13:19:56.705075",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 50,
+      "candidate_id": 50,
+      "decision": "accept",
+      "reason": "passed score + IoU dedup (rule stand-in for Qwen3-VL)",
+      "score": 0.92,
+      "backend": "rule",
+      "raw_output": {
+        "note": "MOCK/rule — not Qwen3-VL",
+        "query": "blue circle",
+        "query_type": "category"
+      },
+      "created_at": "2026-11-05T13:19:56.711596",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 51,
+      "candidate_id": 51,
+      "decision": "accept",
+      "reason": "passed score + IoU dedup (rule stand-in for Qwen3-VL)",
+      "score": 0.92,
+      "backend": "rule",
+      "raw_output": {
+        "note": "MOCK/rule — not Qwen3-VL",
+        "query": "blue circle",
+        "query_type": "category"
+      },
+      "created_at": "2026-11-05T13:19:56.711968",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 52,
+      "candidate_id": 52,
+      "decision": "accept",
+      "reason": "passed score + IoU dedup (rule stand-in for Qwen3-VL)",
+      "score": 0.61,
+      "backend": "rule",
+      "raw_output": {
+        "note": "MOCK/rule — not Qwen3-VL",
+        "query": "blue circle",
+        "query_type": "category"
+      },
+      "created_at": "2026-11-05T13:19:56.712297",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 53,
+      "candidate_id": 53,
+      "decision": "accept",
+      "reason": "passed score + IoU dedup (rule stand-in for Qwen3-VL)",
+      "score": 0.6000000000000001,
+      "backend": "rule",
+      "raw_output": {
+        "note": "MOCK/rule — not Qwen3-VL",
+        "query": "green triangle",
+        "query_type": "category"
+      },
+      "created_at": "2026-11-05T13:19:56.714091",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 54,
+      "candidate_id": 54,
+      "decision": "accept",
+      "reason": "passed score + IoU dedup (rule stand-in for Qwen3-VL)",
+      "score": 0.6000000000000001,
+      "backend": "rule",
+      "raw_output": {
+        "note": "MOCK/rule — not Qwen3-VL",
+        "query": "green triangle",
+        "query_type": "category"
+      },
+      "created_at": "2026-11-05T13:19:56.714484",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 55,
+      "candidate_id": 55,
+      "decision": "duplicate",
+      "reason": "IoU>=0.7 with proposal[0] (ExpertA_mock_sam3)",
+      "score": 0.56,
+      "backend": "rule",
+      "raw_output": {
+        "duplicate_of": 0
+      },
+      "created_at": "2026-11-05T13:19:56.714813",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 56,
+      "candidate_id": 56,
+      "decision": "accept",
+      "reason": "passed score + IoU dedup (rule stand-in for Qwen3-VL)",
+      "score": 0.6100000000000001,
+      "backend": "rule",
+      "raw_output": {
+        "note": "MOCK/rule — not Qwen3-VL",
+        "query": "red rectangle",
+        "query_type": "category"
+      },
+      "created_at": "2026-11-05T13:19:56.716273",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 57,
+      "candidate_id": 57,
+      "decision": "accept",
+      "reason": "passed score + IoU dedup (rule stand-in for Qwen3-VL)",
+      "score": 0.5,
+      "backend": "rule",
+      "raw_output": {
+        "note": "MOCK/rule — not Qwen3-VL",
+        "query": "red rectangle",
+        "query_type": "category"
+      },
+      "created_at": "2026-11-05T13:19:56.716595",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 58,
+      "candidate_id": 58,
+      "decision": "accept",
+      "reason": "passed score + IoU dedup (rule stand-in for Qwen3-VL)",
+      "score": 0.7100000000000001,
+      "backend": "rule",
+      "raw_output": {
+        "note": "MOCK/rule — not Qwen3-VL",
+        "query": "the blue circle on the left",
+        "query_type": "referring"
+      },
+      "created_at": "2026-11-05T13:19:56.718163",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 59,
+      "candidate_id": 59,
+      "decision": "accept",
+      "reason": "passed score + IoU dedup (rule stand-in for Qwen3-VL)",
+      "score": 0.8200000000000001,
+      "backend": "rule",
+      "raw_output": {
+        "note": "MOCK/rule — not Qwen3-VL",
+        "query": "the blue circle on the left",
+        "query_type": "referring"
+      },
+      "created_at": "2026-11-05T13:19:56.718482",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 60,
+      "candidate_id": 60,
+      "decision": "accept",
+      "reason": "passed score + IoU dedup (rule stand-in for Qwen3-VL)",
+      "score": 0.79,
+      "backend": "rule",
+      "raw_output": {
+        "note": "MOCK/rule — not Qwen3-VL",
+        "query": "the largest green triangle",
+        "query_type": "referring"
+      },
+      "created_at": "2026-11-05T13:19:56.720160",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 61,
+      "candidate_id": 61,
+      "decision": "accept",
+      "reason": "passed score + IoU dedup (rule stand-in for Qwen3-VL)",
+      "score": 0.9,
+      "backend": "rule",
+      "raw_output": {
+        "note": "MOCK/rule — not Qwen3-VL",
+        "query": "the largest green triangle",
+        "query_type": "referring"
+      },
+      "created_at": "2026-11-05T13:19:56.720510",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 62,
+      "candidate_id": 62,
+      "decision": "accept",
+      "reason": "passed score + IoU dedup (rule stand-in for Qwen3-VL)",
+      "score": 0.8300000000000001,
+      "backend": "rule",
+      "raw_output": {
+        "note": "MOCK/rule — not Qwen3-VL",
+        "query": "the red rectangle near the center",
+        "query_type": "referring"
+      },
+      "created_at": "2026-11-05T13:19:56.722194",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 63,
+      "candidate_id": 63,
+      "decision": "duplicate",
+      "reason": "IoU>=0.7 with proposal[0] (ExpertA_mock_sam3)",
+      "score": 0.62,
+      "backend": "rule",
+      "raw_output": {
+        "duplicate_of": 0
+      },
+      "created_at": "2026-11-05T13:19:56.722522",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 64,
+      "candidate_id": 64,
+      "decision": "accept",
+      "reason": "passed score + IoU dedup (rule stand-in for Qwen3-VL)",
+      "score": 0.55,
+      "backend": "rule",
+      "raw_output": {
+        "note": "MOCK/rule — not Qwen3-VL",
+        "query": "yellow square",
+        "query_type": "category"
+      },
+      "created_at": "2026-11-05T13:19:56.727372",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 65,
+      "candidate_id": 65,
+      "decision": "accept",
+      "reason": "passed score + IoU dedup (rule stand-in for Qwen3-VL)",
+      "score": 0.74,
+      "backend": "rule",
+      "raw_output": {
+        "note": "MOCK/rule — not Qwen3-VL",
+        "query": "yellow square",
+        "query_type": "category"
+      },
+      "created_at": "2026-11-05T13:19:56.727748",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 66,
+      "candidate_id": 66,
+      "decision": "accept",
+      "reason": "passed score + IoU dedup (rule stand-in for Qwen3-VL)",
+      "score": 0.6000000000000001,
+      "backend": "rule",
+      "raw_output": {
+        "note": "MOCK/rule — not Qwen3-VL",
+        "query": "the yellow square on the left",
+        "query_type": "referring"
+      },
+      "created_at": "2026-11-05T13:19:56.729731",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 67,
+      "candidate_id": 67,
+      "decision": "duplicate",
+      "reason": "IoU>=0.7 with proposal[3] (ExpertB_mock_dino_ovd)",
+      "score": 0.6000000000000001,
+      "backend": "rule",
+      "raw_output": {
+        "duplicate_of": 3
+      },
+      "created_at": "2026-11-05T13:19:56.730060",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 68,
+      "candidate_id": 68,
+      "decision": "accept",
+      "reason": "passed score + IoU dedup (rule stand-in for Qwen3-VL)",
+      "score": 0.63,
+      "backend": "rule",
+      "raw_output": {
+        "note": "MOCK/rule — not Qwen3-VL",
+        "query": "the yellow square on the left",
+        "query_type": "referring"
+      },
+      "created_at": "2026-11-05T13:19:56.730219",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 69,
+      "candidate_id": 69,
+      "decision": "accept",
+      "reason": "passed score + IoU dedup (rule stand-in for Qwen3-VL)",
+      "score": 0.63,
+      "backend": "rule",
+      "raw_output": {
+        "note": "MOCK/rule — not Qwen3-VL",
+        "query": "the yellow square on the left",
+        "query_type": "referring"
+      },
+      "created_at": "2026-11-05T13:19:56.730519",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 70,
+      "candidate_id": 70,
+      "decision": "accept",
+      "reason": "passed score + IoU dedup (rule stand-in for Qwen3-VL)",
+      "score": 0.63,
+      "backend": "rule",
+      "raw_output": {
+        "note": "MOCK/rule — not Qwen3-VL",
+        "query": "red rectangle",
+        "query_type": "category"
+      },
+      "created_at": "2026-11-05T13:19:56.736426",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 71,
+      "candidate_id": 71,
+      "decision": "accept",
+      "reason": "passed score + IoU dedup (rule stand-in for Qwen3-VL)",
+      "score": 0.85,
+      "backend": "rule",
+      "raw_output": {
+        "note": "MOCK/rule — not Qwen3-VL",
+        "query": "red rectangle",
+        "query_type": "category"
+      },
+      "created_at": "2026-11-05T13:19:56.736800",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 72,
+      "candidate_id": 72,
+      "decision": "accept",
+      "reason": "passed score + IoU dedup (rule stand-in for Qwen3-VL)",
+      "score": 0.79,
+      "backend": "rule",
+      "raw_output": {
+        "note": "MOCK/rule — not Qwen3-VL",
+        "query": "the red rectangle on the left",
+        "query_type": "referring"
+      },
+      "created_at": "2026-11-05T13:19:56.738604",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 73,
+      "candidate_id": 73,
+      "decision": "accept",
+      "reason": "passed score + IoU dedup (rule stand-in for Qwen3-VL)",
+      "score": 0.9299999999999999,
+      "backend": "rule",
+      "raw_output": {
+        "note": "MOCK/rule — not Qwen3-VL",
+        "query": "the red rectangle on the left",
+        "query_type": "referring"
+      },
+      "created_at": "2026-11-05T13:19:56.738917",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 74,
+      "candidate_id": 74,
+      "decision": "accept",
+      "reason": "passed score + IoU dedup (rule stand-in for Qwen3-VL)",
+      "score": 0.9299999999999999,
+      "backend": "rule",
+      "raw_output": {
+        "note": "MOCK/rule — not Qwen3-VL",
+        "query": "the red rectangle on the left",
+        "query_type": "referring"
+      },
+      "created_at": "2026-11-05T13:19:56.739224",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    }
+  ],
+  "instance_link": [
+    {
+      "id": 35,
+      "query_id": 31,
+      "candidate_id": 38,
+      "verification_id": 38,
+      "instance_uid": "inst-6da9c29f164f",
+      "x1": 115.20000000000002,
+      "y1": 110.4,
+      "x2": 230.4,
+      "y2": 196.79999999999998,
+      "created_at": "2026-11-05T13:19:56.688635",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 36,
+      "query_id": 31,
+      "candidate_id": 39,
+      "verification_id": 39,
+      "instance_uid": "inst-3d09886f9104",
+      "x1": 339.20000000000005,
+      "y1": 230.40000000000003,
+      "x2": 454.4,
+      "y2": 316.8,
+      "created_at": "2026-11-05T13:19:56.689433",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 37,
+      "query_id": 31,
+      "candidate_id": 40,
+      "verification_id": 40,
+      "instance_uid": "inst-96972e6bdbd7",
+      "x1": 156.16000000000003,
+      "y1": 119.03999999999999,
+      "x2": 284.16,
+      "y2": 195.84,
+      "created_at": "2026-11-05T13:19:56.689778",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 38,
+      "query_id": 31,
+      "candidate_id": 41,
+      "verification_id": 41,
+      "instance_uid": "inst-e81384a4f259",
+      "x1": 360.9600000000001,
+      "y1": 224.64000000000001,
+      "x2": 488.9600000000001,
+      "y2": 301.44,
+      "created_at": "2026-11-05T13:19:56.690113",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 39,
+      "query_id": 32,
+      "candidate_id": 42,
+      "verification_id": 42,
+      "instance_uid": "inst-9ab0e156bba0",
+      "x1": 108.80000000000001,
+      "y1": 115.19999999999999,
+      "x2": 224.0,
+      "y2": 201.59999999999997,
+      "created_at": "2026-11-05T13:19:56.692068",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 40,
+      "query_id": 32,
+      "candidate_id": 43,
+      "verification_id": 43,
+      "instance_uid": "inst-8233173a013c",
+      "x1": 130.56000000000003,
+      "y1": 142.07999999999998,
+      "x2": 258.56000000000006,
+      "y2": 218.88,
+      "created_at": "2026-11-05T13:19:56.692407",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 41,
+      "query_id": 34,
+      "candidate_id": 44,
+      "verification_id": 44,
+      "instance_uid": "inst-66e146b1ff59",
+      "x1": 108.80000000000001,
+      "y1": 105.60000000000002,
+      "x2": 224.0,
+      "y2": 192.0,
+      "created_at": "2026-11-05T13:19:56.701790",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 42,
+      "query_id": 34,
+      "candidate_id": 45,
+      "verification_id": 45,
+      "instance_uid": "inst-0fa701790b5b",
+      "x1": 166.40000000000003,
+      "y1": 142.07999999999998,
+      "x2": 294.40000000000003,
+      "y2": 218.88,
+      "created_at": "2026-11-05T13:19:56.702154",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 43,
+      "query_id": 34,
+      "candidate_id": 46,
+      "verification_id": 46,
+      "instance_uid": "inst-b9a28ac4f34c",
+      "x1": 371.20000000000005,
+      "y1": 247.68000000000004,
+      "x2": 499.20000000000005,
+      "y2": 324.48,
+      "created_at": "2026-11-05T13:19:56.702456",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 44,
+      "query_id": 35,
+      "candidate_id": 47,
+      "verification_id": 47,
+      "instance_uid": "inst-662bfadaae70",
+      "x1": 121.60000000000002,
+      "y1": 105.60000000000002,
+      "x2": 236.8,
+      "y2": 192.0,
+      "created_at": "2026-11-05T13:19:56.704518",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 45,
+      "query_id": 35,
+      "candidate_id": 48,
+      "verification_id": 48,
+      "instance_uid": "inst-2b97b3dfeca0",
+      "x1": 345.6,
+      "y1": 225.60000000000002,
+      "x2": 460.79999999999995,
+      "y2": 312.0,
+      "created_at": "2026-11-05T13:19:56.704897",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 46,
+      "query_id": 35,
+      "candidate_id": 49,
+      "verification_id": 49,
+      "instance_uid": "inst-1ab64005541a",
+      "x1": 115.20000000000002,
+      "y1": 126.72,
+      "x2": 243.20000000000002,
+      "y2": 203.52,
+      "created_at": "2026-11-05T13:19:56.705241",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 47,
+      "query_id": 37,
+      "candidate_id": 50,
+      "verification_id": 50,
+      "instance_uid": "inst-172ee37ced2b",
+      "x1": 115.20000000000002,
+      "y1": 110.4,
+      "x2": 230.4,
+      "y2": 196.79999999999998,
+      "created_at": "2026-11-05T13:19:56.711790",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 48,
+      "query_id": 37,
+      "candidate_id": 51,
+      "verification_id": 51,
+      "instance_uid": "inst-089f51a5adad",
+      "x1": 339.20000000000005,
+      "y1": 230.40000000000003,
+      "x2": 454.4,
+      "y2": 316.8,
+      "created_at": "2026-11-05T13:19:56.712127",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 49,
+      "query_id": 37,
+      "candidate_id": 52,
+      "verification_id": 52,
+      "instance_uid": "inst-e6db96955760",
+      "x1": 130.56000000000003,
+      "y1": 145.92,
+      "x2": 258.56000000000006,
+      "y2": 222.72,
+      "created_at": "2026-11-05T13:19:56.712451",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 50,
+      "query_id": 38,
+      "candidate_id": 53,
+      "verification_id": 53,
+      "instance_uid": "inst-e6a5bd697f22",
+      "x1": 140.8,
+      "y1": 100.80000000000001,
+      "x2": 256.0,
+      "y2": 187.2,
+      "created_at": "2026-11-05T13:19:56.714263",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 51,
+      "query_id": 38,
+      "candidate_id": 54,
+      "verification_id": 54,
+      "instance_uid": "inst-a6bd813e59b1",
+      "x1": 364.79999999999995,
+      "y1": 220.8,
+      "x2": 480.0,
+      "y2": 307.2,
+      "created_at": "2026-11-05T13:19:56.714646",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 52,
+      "query_id": 39,
+      "candidate_id": 56,
+      "verification_id": 56,
+      "instance_uid": "inst-e20621b32b89",
+      "x1": 108.80000000000001,
+      "y1": 105.60000000000002,
+      "x2": 224.0,
+      "y2": 192.0,
+      "created_at": "2026-11-05T13:19:56.716443",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 53,
+      "query_id": 39,
+      "candidate_id": 57,
+      "verification_id": 57,
+      "instance_uid": "inst-ebae5439e7b7",
+      "x1": 135.68000000000004,
+      "y1": 122.88,
+      "x2": 263.68000000000006,
+      "y2": 199.68,
+      "created_at": "2026-11-05T13:19:56.716744",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 54,
+      "query_id": 40,
+      "candidate_id": 58,
+      "verification_id": 58,
+      "instance_uid": "inst-e489f5c56fbd",
+      "x1": 108.80000000000001,
+      "y1": 105.60000000000002,
+      "x2": 224.0,
+      "y2": 192.0,
+      "created_at": "2026-11-05T13:19:56.718327",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 55,
+      "query_id": 40,
+      "candidate_id": 59,
+      "verification_id": 59,
+      "instance_uid": "inst-6629d3eac835",
+      "x1": 130.56000000000003,
+      "y1": 126.72,
+      "x2": 258.56000000000006,
+      "y2": 203.52,
+      "created_at": "2026-11-05T13:19:56.718631",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 56,
+      "query_id": 41,
+      "candidate_id": 60,
+      "verification_id": 60,
+      "instance_uid": "inst-d6638460fe5a",
+      "x1": 121.60000000000002,
+      "y1": 120.0,
+      "x2": 236.8,
+      "y2": 206.39999999999998,
+      "created_at": "2026-11-05T13:19:56.720349",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 57,
+      "query_id": 41,
+      "candidate_id": 61,
+      "verification_id": 61,
+      "instance_uid": "inst-07d5102461cf",
+      "x1": 130.56000000000003,
+      "y1": 119.03999999999999,
+      "x2": 258.56000000000006,
+      "y2": 195.84,
+      "created_at": "2026-11-05T13:19:56.720663",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 58,
+      "query_id": 42,
+      "candidate_id": 62,
+      "verification_id": 62,
+      "instance_uid": "inst-46c22f947c5f",
+      "x1": 128.0,
+      "y1": 115.19999999999999,
+      "x2": 243.2,
+      "y2": 201.59999999999997,
+      "created_at": "2026-11-05T13:19:56.722365",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 59,
+      "query_id": 44,
+      "candidate_id": 64,
+      "verification_id": 64,
+      "instance_uid": "inst-2dba2f0f5460",
+      "x1": 108.80000000000001,
+      "y1": 100.80000000000001,
+      "x2": 224.0,
+      "y2": 187.2,
+      "created_at": "2026-11-05T13:19:56.727559",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 60,
+      "query_id": 44,
+      "candidate_id": 65,
+      "verification_id": 65,
+      "instance_uid": "inst-8e9c87031cce",
+      "x1": 156.16000000000003,
+      "y1": 115.19999999999999,
+      "x2": 284.16,
+      "y2": 192.0,
+      "created_at": "2026-11-05T13:19:56.727910",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 61,
+      "query_id": 45,
+      "candidate_id": 66,
+      "verification_id": 66,
+      "instance_uid": "inst-999389cc2f6d",
+      "x1": 128.0,
+      "y1": 100.80000000000001,
+      "x2": 243.2,
+      "y2": 187.2,
+      "created_at": "2026-11-05T13:19:56.729894",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 62,
+      "query_id": 45,
+      "candidate_id": 68,
+      "verification_id": 68,
+      "instance_uid": "inst-a417189402da",
+      "x1": 130.56000000000003,
+      "y1": 119.03999999999999,
+      "x2": 258.56000000000006,
+      "y2": 195.84,
+      "created_at": "2026-11-05T13:19:56.730372",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 63,
+      "query_id": 45,
+      "candidate_id": 69,
+      "verification_id": 69,
+      "instance_uid": "inst-45cb94506412",
+      "x1": 335.36000000000007,
+      "y1": 224.64000000000001,
+      "x2": 463.36000000000007,
+      "y2": 301.44,
+      "created_at": "2026-11-05T13:19:56.730660",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 64,
+      "query_id": 47,
+      "candidate_id": 70,
+      "verification_id": 70,
+      "instance_uid": "inst-3fd4f9cb575e",
+      "x1": 102.4,
+      "y1": 115.19999999999999,
+      "x2": 217.6,
+      "y2": 201.59999999999997,
+      "created_at": "2026-11-05T13:19:56.736623",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 65,
+      "query_id": 47,
+      "candidate_id": 71,
+      "verification_id": 71,
+      "instance_uid": "inst-7b64db9b6432",
+      "x1": 140.8,
+      "y1": 145.92,
+      "x2": 268.8,
+      "y2": 222.72,
+      "created_at": "2026-11-05T13:19:56.736958",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 66,
+      "query_id": 48,
+      "candidate_id": 72,
+      "verification_id": 72,
+      "instance_uid": "inst-16f761c3f657",
+      "x1": 121.60000000000002,
+      "y1": 120.0,
+      "x2": 236.8,
+      "y2": 206.39999999999998,
+      "created_at": "2026-11-05T13:19:56.738769",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 67,
+      "query_id": 48,
+      "candidate_id": 73,
+      "verification_id": 73,
+      "instance_uid": "inst-3d00054d67bb",
+      "x1": 156.16000000000003,
+      "y1": 122.88,
+      "x2": 284.16,
+      "y2": 199.68,
+      "created_at": "2026-11-05T13:19:56.739061",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    },
+    {
+      "id": 68,
+      "query_id": 48,
+      "candidate_id": 74,
+      "verification_id": 74,
+      "instance_uid": "inst-1d7b8c9e8662",
+      "x1": 360.9600000000001,
+      "y1": 228.48,
+      "x2": 488.9600000000001,
+      "y2": 305.28,
+      "created_at": "2026-11-05T13:19:56.739377",
+      "run_id": "run-20261105T131956Z-06cfe48a",
+      "data_version": "m1-mvp-0.1",
+      "valid_status": "valid"
+    }
+  ],
+  "mask_alpha": []
+}
