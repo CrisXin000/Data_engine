@@ -1,7 +1,8 @@
 """Semantic discovery (§2.1).
 
 Paper: Tokenize Anything for category discovery; Qwen3-VL for referring expressions.
-MVP: mock tagger + rule/template referring generator; optional YOLO-World if available.
+MVP: mock tagger + optional YOLO-World category tagger; referring via mock templates or
+grounded structured generator (YOLO-World boxes + crop stats; stands in for Qwen3-VL).
 """
 
 from __future__ import annotations
@@ -215,7 +216,8 @@ class MockReferringGenerator(ReferringGenerator):
                     query_type="referring",
                     meta={
                         "backend": self.name,
-                        "note": "MOCK template — Qwen3-VL interface reserved",
+                        "mock": True,
+                        "note": "MOCK template — not grounded; Qwen3-VL not used",
                         "base_category": lab,
                     },
                 )
@@ -228,6 +230,7 @@ class MockReferringGenerator(ReferringGenerator):
                     query_type="referring",
                     meta={
                         "backend": self.name,
+                        "mock": True,
                         "is_negative_hint": True,
                         "note": "MOCK absent-target referring query",
                     },
@@ -237,9 +240,18 @@ class MockReferringGenerator(ReferringGenerator):
 
 
 class Qwen3VLReferringInterface(ReferringGenerator):
-    """Reserved interface for Qwen3-VL referring generation — not implemented."""
+    """Config name `qwen3_vl` — does NOT load Qwen3-VL.
+
+    Delegates to the open-source structured grounded generator (optional light caption
+    attempt first). Kept as a named class so older docs/imports still resolve.
+    """
 
     name = "qwen3_vl"
+
+    def __init__(self, **kwargs) -> None:
+        from wde.discover.referring import Qwen3VLReferringAlias
+
+        self._impl = Qwen3VLReferringAlias(**kwargs)
 
     def generate(
         self,
@@ -248,9 +260,7 @@ class Qwen3VLReferringInterface(ReferringGenerator):
         width: int,
         height: int,
     ) -> list[DiscoveredQuery]:
-        raise NotImplementedError(
-            "Qwen3-VL referring generator is reserved. Set referring_generator=mock for MVP."
-        )
+        return self._impl.generate(image_path, categories, width, height)
 
 
 def build_category_tagger(name: str) -> CategoryTagger:
@@ -259,9 +269,23 @@ def build_category_tagger(name: str) -> CategoryTagger:
     return MockCategoryTagger()
 
 
-def build_referring_generator(name: str) -> ReferringGenerator:
-    if name == "qwen3_vl":
-        return Qwen3VLReferringInterface()
+def build_referring_generator(name: str, **kwargs) -> ReferringGenerator:
+    """Build referring generator by config name.
+
+    Names:
+      - mock: template strings (kept for regression)
+      - structured / grounded: YOLO-World boxes + crop color/position (main M2 impl)
+      - qwen3_vl: alias → structured (optional BLIP attempt); NOT real Qwen3-VL
+    """
+    key = (name or "mock").strip().lower()
+    if key in {"structured", "grounded"}:
+        from wde.discover.referring import GroundedReferringGenerator, StructuredReferringGenerator
+
+        if key == "grounded":
+            return GroundedReferringGenerator(**kwargs)
+        return StructuredReferringGenerator(**kwargs)
+    if key in {"qwen3_vl", "qwen3-vl", "qwen"}:
+        return Qwen3VLReferringInterface(**kwargs)
     return MockReferringGenerator()
 
 

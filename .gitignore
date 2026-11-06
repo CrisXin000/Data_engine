@@ -6,7 +6,9 @@ __pycache__/
 data/models/*.pt
 weights/
 *.pt
+*.onnx
 *.safetensors
+*.bin
 data/wde.sqlite
 data/wde.sqlite-*
 .DS_Store

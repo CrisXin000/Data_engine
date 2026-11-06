@@ -31,6 +31,15 @@ real = [
   "transformers>=4.40",
   "ftfy>=6.0",
 ]
+# Semantic verify stand-in for Qwen3-VL (weak CLIP). Florence-2 optional / currently broken on transformers 5.x
+vlm = [
+  "ftfy>=6.0",
+  # pip install git+https://github.com/openai/CLIP.git  (provides `clip`)
+]
+# M4 continuous alpha (ONNX BiRefNet-General-Lite). Not required for mock/stub.
+matte = [
+  "onnxruntime>=1.17",
+]
 
 [project.scripts]
 wde = "wde.cli:main"

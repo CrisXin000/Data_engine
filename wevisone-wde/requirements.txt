@@ -17,3 +17,6 @@ rich>=13.0
 # ultralytics>=8.0
 # transformers>=4.40
 # ftfy
+# Optional VLM/semantic verify (CPU)
+# openai-clip / clip  (pip install git+https://github.com/openai/CLIP.git)
+# einops timm  # only if trying Florence-2

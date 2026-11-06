@@ -18,7 +18,8 @@ models:
   mode: mock                    # mock | real  (CLI --mode overrides)
   discover:
     category_tagger: mock       # mock | yolo_world (real mode defaults to yolo_world)
-    referring_generator: mock   # mock | qwen3_vl (interface reserved)
+    referring_generator: mock   # mock | structured | grounded | qwen3_vl (alias→structured; NOT real Qwen3-VL)
+    # referring_enable_caption: false  # optional BLIP; OOM → skip (structured path)
   propose:
     # Paper: ExpertA=SAM3, ExpertB=in-house DINO OVD
     # Real substitutes: yolo_world | owlv2 | yolo_world_b (weak dual YOLO)
@@ -30,17 +31,45 @@ models:
     # expert_b_conf: 0.35
     # expert_b_score_threshold: 0.1
   verify:
-    backend: rule               # rule | vlm_json (interface reserved)
+    # Paper: Qwen3-VL. Engineering: rule | clip_semantic | vlm_json (Florence→CLIP fallback)
+    # Aliases for vlm_json: vlm. Direct: florence2 (may fail on transformers 5.x).
+    backend: rule
+    # CLIP thresholds (cosine similarity on ViT-B/32). Uncertain band is [reject_max, accept_min).
+    clip_accept_min: 0.22
+    clip_reject_max: 0.18
+    clip_pad_ratio: 0.12
+    clip_weights: weights/clip/ViT-B-32.pt
+    florence_model: microsoft/Florence-2-base
+    vlm_prefer: florence2       # florence2 | clip_semantic
+    fallback_to_rule: false     # if true, VLM load failure → rule (recorded in raw)
+    device: cpu
   segment:
-    backend: stub               # stub | sam2 (reserved)
+    backend: stub               # stub | sam2 | mobile_sam | box_fill
+    weights: weights/segment/sam2_t.pt   # ultralytics SAM2-Tiny (not Meta sam2 package)
+    device: cpu
+    imgsz: 512                  # official SAM default is 1024; 512 is CPU-RAM friendly
   matte:
-    backend: stub               # stub | birefnet_matanyone (reserved)
+    backend: stub               # stub | birefnet_lite | birefnet | feather | copy_s
+                                # birefnet_matanyone is an alias of birefnet_lite (MatAnyone2 is NOT run)
+    weights: weights/matte/BiRefNet-general-bb_swin_v1_tiny-epoch_232.onnx
+    device: cpu
+    imgsz: 1024                 # official lite ONNX is exported at 1024
+    crop_pad_ratio: 0.15
+    bin_threshold: 0.5
+    # Paper-style gate subset vs binary mask S (defaults are engineering, not quoted from the paper)
+    iou_min: 0.5
+    coverage_min: 0.6
+    area_ratio_min: 0.5
+    area_ratio_max: 2.0
+    fallback: feather           # feather | copy_s
+    feather_radius: 3.0
+    feather_band: 4.0
 
 pipeline:
   iou_dedup_threshold: 0.7
   accept_min_score: 0.3
-  skip_segment: true            # M1: skip SAM2 mask
-  skip_matte: true              # M1: skip matting
+  skip_segment: true            # M3: set false or pass CLI --segment sam2
+  skip_matte: true              # M4: set false or pass CLI --matte birefnet_lite
 
 kg:
   wordnet_synsets:              # seed concepts (common objects)

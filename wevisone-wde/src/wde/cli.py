@@ -22,7 +22,7 @@ console = Console()
 @click.option("--config", "config_path", default=None, help="Path to YAML config")
 @click.pass_context
 def main(ctx: click.Context, config_path: str | None) -> None:
-    """WeVisOne-WDE MVP CLI (M0+M1)."""
+    """WeVisOne-WDE MVP CLI (M0–M3 + optional M4 matte)."""
     ctx.ensure_object(dict)
     ctx.obj["config_path"] = config_path
     ctx.obj["cfg"] = load_config(config_path)
@@ -54,10 +54,62 @@ def ingest_gold_cmd(ctx: click.Context) -> None:
 @main.command("run")
 @click.option("--images", "images_dir", required=True, type=click.Path(exists=True))
 @click.option("--mode", default="mock", type=click.Choice(["mock", "real"]))
+@click.option(
+    "--verify",
+    "verify_backend",
+    default=None,
+    type=click.Choice(["rule", "vlm_json", "vlm", "florence2", "clip_semantic", "clip"]),
+    help="Override models.verify.backend (real mode). mock mode still forces rule.",
+)
+@click.option(
+    "--referring",
+    "referring_generator",
+    default=None,
+    type=click.Choice(["mock", "structured", "grounded", "qwen3_vl"]),
+    help=(
+        "Override models.discover.referring_generator. "
+        "structured/grounded = YOLO-World+crop stats (stand-in for Qwen3-VL); "
+        "qwen3_vl = alias→structured (NOT real Qwen3-VL). mock mode still forces mock."
+    ),
+)
+@click.option(
+    "--segment",
+    "segment_backend",
+    default=None,
+    type=click.Choice(["stub", "sam2", "mobile_sam", "box_fill", "skip"]),
+    help=(
+        "Override models.segment.backend and set skip_segment=false. "
+        "sam2 = ultralytics SAM2-Tiny stand-in (NOT official Meta sam2). "
+        "mobile_sam / box_fill = weaker fallbacks. skip = leave skip_segment=true."
+    ),
+)
+@click.option(
+    "--matte",
+    "matte_backend",
+    default=None,
+    type=click.Choice(
+        ["stub", "birefnet_lite", "birefnet", "birefnet_matanyone", "feather", "copy_s", "skip"]
+    ),
+    help=(
+        "Override models.matte.backend and set skip_matte=false. "
+        "birefnet_lite/birefnet = ONNX BiRefNet-General-Lite stand-in for paper "
+        "BiRefNet/MatAnyone2 (NOT MatAnyone2, NOT a trained paper annotator). "
+        "feather/copy_s = soften or copy the binary mask S. skip = leave skip_matte=true."
+    ),
+)
 @click.option("--run-id", default=None)
 @click.pass_context
-def run_cmd(ctx: click.Context, images_dir: str, mode: str, run_id: str | None) -> None:
-    """Run discover → propose → verify → (optional segment/matte) → write DB."""
+def run_cmd(
+    ctx: click.Context,
+    images_dir: str,
+    mode: str,
+    verify_backend: str | None,
+    referring_generator: str | None,
+    segment_backend: str | None,
+    matte_backend: str | None,
+    run_id: str | None,
+) -> None:
+    """Run discover (incl. referring) → propose → verify → (optional segment/matte) → write DB."""
     cfg = ctx.obj["cfg"]
     init_db(cfg["paths"]["db"])
     paths = sorted(Path(images_dir).glob("*"))
@@ -65,7 +117,16 @@ def run_cmd(ctx: click.Context, images_dir: str, mode: str, run_id: str | None) 
     if not paths:
         raise click.ClickException(f"No images under {images_dir}")
     rid = run_id or new_run_id()
-    stats = run_pipeline(paths, run_id=rid, mode=mode, config_path=ctx.obj["config_path"])
+    stats = run_pipeline(
+        paths,
+        run_id=rid,
+        mode=mode,
+        config_path=ctx.obj["config_path"],
+        verify_backend=verify_backend,
+        referring_generator=referring_generator,
+        segment_backend=segment_backend,
+        matte_backend=matte_backend,
+    )
     console.print("[green]Pipeline done[/green]")
     console.print(stats)
     console.print(f"Run dir: {Path(cfg['paths']['runs']) / rid}")

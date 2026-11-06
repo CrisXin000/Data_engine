@@ -17,3 +17,17 @@ nltk_data/
 data/models/
 .cache/
 data/gold/images_real_smoke/
+
+# VLM / CLIP weights (keep dirs, ignore blobs)
+weights/**/*.pt
+weights/**/*.bin
+weights/**/*.safetensors
+*.safetensors
+*.bin
+!requirements.txt
+data/gold/images_real_smoke/
+data/gold/images_real_smoke_vlm/
+data/gold/images_real_smoke_segment/
+
+weights/**/*.onnx
+data/gold/images_real_smoke_matte/
