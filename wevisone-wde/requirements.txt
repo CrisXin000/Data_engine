@@ -1,0 +1,22 @@
+# WeVisOne-WDE MVP — Python 3.11+
+# Install: pip install -e ".[dev]"  or  pip install -r requirements.txt
+sqlalchemy>=2.0
+pydantic>=2.0
+pydantic-settings>=2.0
+pyyaml>=6.0
+click>=8.1
+pillow>=10.0
+numpy>=1.26
+nltk>=3.8
+rich>=13.0
+
+# Optional real detectors (CPU). Prefer scripts/setup_real_detectors.sh
+# which installs torch from the official CPU wheel index.
+# torch  # install via --index-url https://download.pytorch.org/whl/cpu
+# torchvision
+# ultralytics>=8.0
+# transformers>=4.40
+# ftfy
+# Optional VLM/semantic verify (CPU)
+# openai-clip / clip  (pip install git+https://github.com/openai/CLIP.git)
+# einops timm  # only if trying Florence-2

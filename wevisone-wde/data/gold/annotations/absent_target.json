@@ -1,0 +1,30 @@
+{
+  "image": "absent_target.png",
+  "width": 640,
+  "height": 480,
+  "objects": [
+    {
+      "label": "red rectangle",
+      "kind": "rectangle",
+      "xyxy": [
+        200,
+        150,
+        400,
+        320
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "text": "red rectangle",
+      "query_type": "category",
+      "is_negative": false
+    },
+    {
+      "text": "the purple hexagon that does not exist",
+      "query_type": "referring",
+      "is_negative": true
+    }
+  ],
+  "note": "Synthetic gold — public domain / generated; no external copyrighted images."
+}
