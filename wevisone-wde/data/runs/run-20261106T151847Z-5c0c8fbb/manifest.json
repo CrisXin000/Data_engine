@@ -1,0 +1,74 @@
+{
+  "run_id": "run-20261106T151847Z-5c0c8fbb",
+  "stats": {
+    "run_id": "run-20261106T151847Z-5c0c8fbb",
+    "data_version": "m1-mvp-0.1",
+    "mode": "real",
+    "verify_backend": "rule",
+    "images": 2,
+    "queries": 8,
+    "candidates": 26,
+    "verifications": 26,
+    "instance_links": 12,
+    "masks": 12,
+    "alphas": 12,
+    "segment_backend": "sam2",
+    "skip_segment": false,
+    "matte_backend": "birefnet_lite",
+    "skip_matte": false
+  },
+  "config_snapshot": {
+    "models": {
+      "mode": "real",
+      "discover": {
+        "category_tagger": "yolo_world",
+        "referring_generator": "mock"
+      },
+      "propose": {
+        "expert_a": "yolo_world",
+        "expert_b": "owlv2"
+      },
+      "verify": {
+        "backend": "rule",
+        "clip_accept_min": 0.22,
+        "clip_reject_max": 0.18,
+        "clip_pad_ratio": 0.12,
+        "clip_weights": "weights/clip/ViT-B-32.pt",
+        "florence_model": "microsoft/Florence-2-base",
+        "vlm_prefer": "florence2",
+        "fallback_to_rule": false,
+        "device": "cpu"
+      },
+      "segment": {
+        "backend": "sam2",
+        "weights": "weights/segment/sam2_t.pt",
+        "device": "cpu",
+        "imgsz": 512
+      },
+      "matte": {
+        "backend": "birefnet_lite",
+        "weights": "weights/matte/BiRefNet-general-bb_swin_v1_tiny-epoch_232.onnx",
+        "device": "cpu",
+        "imgsz": 1024,
+        "crop_pad_ratio": 0.15,
+        "bin_threshold": 0.5,
+        "iou_min": 0.5,
+        "coverage_min": 0.6,
+        "area_ratio_min": 0.5,
+        "area_ratio_max": 2.0,
+        "fallback": "feather",
+        "feather_radius": 3.0,
+        "feather_band": 4.0
+      }
+    },
+    "pipeline": {
+      "iou_dedup_threshold": 0.7,
+      "accept_min_score": 0.3,
+      "skip_segment": false,
+      "skip_matte": false
+    },
+    "data_version": "m1-mvp-0.1",
+    "graph_version": "kg-v0"
+  },
+  "note": "M1+M2 pipeline — mode=real; verify=rule; referring=mock; real experts are YOLO-World / OWLv2 open-source substitutes (NOT paper SAM3 / in-house DINO); referring structured/grounded/qwen3_vl-alias and verify clip/vlm_json are open-source stand-ins for Qwen3-VL (NOT Qwen3-VL); segment=sam2 (ultralytics SAM2-Tiny / MobileSAM / box_fill stand-in for paper SAM2; NOT the official Meta sam2 package); matte=birefnet_lite (ONNX BiRefNet-General-Lite stand-in for paper BiRefNet/MatAnyone2; NOT MatAnyone2, NOT a trained paper matting annotator)"
+}

@@ -1,0 +1,41 @@
+{
+  "image": "referring_left_right.png",
+  "width": 640,
+  "height": 480,
+  "objects": [
+    {
+      "label": "yellow square",
+      "kind": "square",
+      "xyxy": [
+        50,
+        180,
+        180,
+        310
+      ]
+    },
+    {
+      "label": "yellow square",
+      "kind": "square",
+      "xyxy": [
+        420,
+        180,
+        550,
+        310
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "text": "yellow square",
+      "query_type": "category",
+      "is_negative": false
+    },
+    {
+      "text": "the yellow square on the left",
+      "query_type": "referring",
+      "is_negative": false,
+      "target_index": 0
+    }
+  ],
+  "note": "Synthetic gold — public domain / generated; no external copyrighted images."
+}

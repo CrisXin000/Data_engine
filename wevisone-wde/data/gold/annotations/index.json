@@ -1,0 +1,22 @@
+[
+  {
+    "image": "single_red_rect.png",
+    "annotation": "single_red_rect.json"
+  },
+  {
+    "image": "multi_shapes.png",
+    "annotation": "multi_shapes.json"
+  },
+  {
+    "image": "referring_left_right.png",
+    "annotation": "referring_left_right.json"
+  },
+  {
+    "image": "absent_target.png",
+    "annotation": "absent_target.json"
+  },
+  {
+    "image": "dense_small.png",
+    "annotation": "dense_small.json"
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "image": "single_red_rect.png",
+  "width": 640,
+  "height": 480,
+  "objects": [
+    {
+      "label": "red rectangle",
+      "kind": "rectangle",
+      "xyxy": [
+        180,
+        120,
+        420,
+        340
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "text": "red rectangle",
+      "query_type": "category",
+      "is_negative": false
+    }
+  ],
+  "note": "Synthetic gold — public domain / generated; no external copyrighted images."
+}

@@ -1,0 +1,70 @@
+{
+  "image": "dense_small.png",
+  "width": 640,
+  "height": 480,
+  "objects": [
+    {
+      "label": "blue circle",
+      "kind": "circle",
+      "xyxy": [
+        30,
+        40,
+        90,
+        100
+      ]
+    },
+    {
+      "label": "blue circle",
+      "kind": "circle",
+      "xyxy": [
+        130,
+        160,
+        190,
+        220
+      ]
+    },
+    {
+      "label": "blue circle",
+      "kind": "circle",
+      "xyxy": [
+        230,
+        40,
+        290,
+        100
+      ]
+    },
+    {
+      "label": "blue circle",
+      "kind": "circle",
+      "xyxy": [
+        330,
+        160,
+        390,
+        220
+      ]
+    },
+    {
+      "label": "blue circle",
+      "kind": "circle",
+      "xyxy": [
+        430,
+        40,
+        490,
+        100
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "text": "blue circle",
+      "query_type": "category",
+      "is_negative": false
+    },
+    {
+      "text": "the largest blue circle",
+      "query_type": "referring",
+      "is_negative": false
+    }
+  ],
+  "note": "Synthetic gold — public domain / generated; no external copyrighted images."
+}
